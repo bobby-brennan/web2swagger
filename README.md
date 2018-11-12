@@ -28,11 +28,11 @@ After setup you can run the crawler using these steps:
 
 1. Change to the directory of the project (where the scrapy.cfg resides) and there run:
 
-	> *scrapy crawl web2swagger -a nput_file='config_file.py'*
+	> *scrapy crawl web2swagger -a config_file='config_file.py'*
 
 	Example:
 
-	> *scrapy crawl web2swagger -a input_file=web2swagger/config/basecamp.py*
+	> *scrapy crawl web2swagger -a config_file=web2swagger/config/basecamp.py*
 
 This will start scraping the REST API into swagger format. Results will be validated and stored in a file named specs.json. 
 
