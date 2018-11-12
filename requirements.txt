@@ -1,0 +1,61 @@
+# for number crunching
+numpy
+pandas
+xlrd
+docx2txt
+
+# for scraping
+scrapy
+lxml
+
+selenium
+pyvirtualdisplay
+
+# for API / web ui
+requests
+gunicorn
+flask
+flask-admin
+
+# for deployment
+# this is better (python 3 compatible), but has no fabtools!!
+fabric3
+#fabric
+#fabtools
+#fake
+
+# for testing
+scrapy_tdd
+pytest==3.0.3
+pytest-bdd==2.18.0
+pytest-cov
+pytest-describe==0.11.0
+pytest-twisted
+pytest-watch
+
+#pytest-flask
+pytest-xdist
+
+# for database access
+psycopg2
+#MySQL-python
+dataset
+sqlalchemy
+couchdb
+
+
+# for python 2.7, otherwise remove the version
+ftfy==4.4.3
+
+# various parsing helpers
+phonenumbers
+nameparser
+dateparser
+
+pylint
+
+psutil
+genson
+jsondiff
+
+openapi-spec-validator

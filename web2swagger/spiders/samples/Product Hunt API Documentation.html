@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Hunt API Documentation</title><link rel="canonical" href="https://api.producthunt.com/v1/docs" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="description" content="Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#39;s talking about." /><meta property="fb:app_id" content="1467820943460899" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@producthunt" /><meta name="twitter:title" content="Product Hunt API Documentation" /><meta name="twitter:description" content="Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#39;s talking about." /><meta name="twitter:image" content="https://url2png.producthunt.com/v6/P5329C1FA0ECB6/9aa5d6acda3c2f78b3d745ab20072db8/png/?url=https%3A%2F%2Fapi.producthunt.com%2Fv1%2Fdocs" /><meta name="twitter:creator" content="@producthunt" /><meta property="og:site_name" content="Product Hunt" /><meta property="og:title" content="Product Hunt API Documentation" /><meta property="og:type" content="article" /><meta property="og:image" content="https://url2png.producthunt.com/v6/P5329C1FA0ECB6/9aa5d6acda3c2f78b3d745ab20072db8/png/?url=https%3A%2F%2Fapi.producthunt.com%2Fv1%2Fdocs" /><meta property="og:description" content="Product Hunt is a curation of the best new products, every day. Discover the latest mobile apps, websites, and technology products that everyone&#39;s talking about." /><meta property="og:locale" content="en_US" /><meta property="og:url" content="https://api.producthunt.com/v1/docs" />
+
+  <link rel="stylesheet" media="all" href="https://assets.producthunt.com/stylesheets/application.css" />
+  <link rel="stylesheet" media="all" href="https://assets.producthunt.com/assets/api-4cee3ee0c0c679f58a908044c0c9c3ce0dc57ffd92aabd09ff483da4cf2120cd.css" />
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ujs/1.2.2/rails.min.js"></script>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="4adU5OOHz0v23m0vI0AJIdKdH/xsbjNOL9aXwHD3wAPpzh3goOi3ByA5xPvdNoMiSjhgvHMA26rzsGEujnwxHA==" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+
+<body class="api-v1-docs-index">
+  <header class="api-docs-header">
+    <div class="container">
+      <a class="api-docs-header--logo" href="https://www.producthunt.com">
+        <svg width="40" height="40" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20" fill="#DA552F"></path><path d="M22.667 20H17v-6h5.667c1.656 0 3 1.343 3 3s-1.344 3-3 3m0-10H13v20h4v-6h5.667c3.866 0 7-3.134 7-7s-3.134-7-7-7" fill="#FFF"></path></g></svg>
+        <h1 class="api-docs-header--logo--title">Product Hunt</h1>
+</a>      <a class="api-docs-header--api" href="/v1/oauth/applications">API Dashboard</a>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="main-content">
+      <div class="container p-api-v1-docs">
+        <ul class="api--sidenav">
+          <li class="api--sidenav--heading">
+            <a href="/v1/docs">Welcome to the API</a>
+          </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="OAuth User Authentication">
+                  OAuth User Authentication
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="OAuth User Authentication">
+                  <li>
+                    <a href="/v1/docs/oauth_user_authentication/oauth_authorize_ask_for_access_grant_code_on_behalf_of_the_user">oauth#authorize - Ask for access grant code on behalf of the user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/oauth_user_authentication/oauth_token_use_the_access_grant_code_you_received_through_the_redirect_to_request_an_access_token">oauth#token - Use the access grant code you received through the redirect to request an access token</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/oauth_user_authentication/oauth_test_add_the_access_token_as_header_to_any_request">oauth#test - Add the access_token as header to any request</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/oauth_user_authentication/unauthorized_oauth_oauth_test_invalid_access_tokens_will_lead_to_error_messages">unauthorized_oauth: oauth#test - Invalid access_tokens will lead to error messages</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="OAuth Client Only Authentication">
+                  OAuth Client Only Authentication
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="OAuth Client Only Authentication">
+                  <li>
+                    <a href="/v1/docs/oauth_client_only_authentication/oauth_token_ask_for_client_level_token">oauth#token - Ask for client level token</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/oauth_client_only_authentication/oauth_test_use_the_client_level_token_for_read_api_access">oauth#test - Use the client level token for read api access</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/oauth_client_only_authentication/unauthorized_oauth_oauth_test_invalid_access_to_user-level_content_with_just_an_client_level_token_will_lead_to_errors">unauthorized_oauth: oauth#test - Invalid access to user-level content with just an client level token will lead to errors</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Posts">
+                  Posts
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Posts">
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_get_the_tech_posts_of_today">posts#index - Get the tech posts of today</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_request_previous_day_with_`days_ago`_parameter_(tech_category)">posts#index - Request previous day with `days_ago` parameter (Tech category)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_request_a_specific_day_with_the_`day`_parameter_(tech_category)">posts#index - Request a specific day with the `day` parameter (Tech category)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_get_the_posts_of_today_(for_given_category)">posts#index - Get the posts of today (for given category)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_request_previous_day_with_`days_ago`_parameter_(for_given_category)">posts#index - Request previous day with `days_ago` parameter (for given category)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_request_a_specific_day_with_the_`day`_parameter_(for_given_category)">posts#index - Request a specific day with the `day` parameter (for given category)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_find_posts_with_given_url_(eg_to_avoid_duplicates)">posts#all - Find posts with given url (eg to avoid duplicates)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_find_posts_with_given_category">posts#all - Find posts with given category</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_find_posts_with_given_topic">posts#all - Find posts with given topic</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_get_most_upvoted_posts_for_a_given_month">posts#all - get most upvoted posts for a given month</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_get_the_latest_posts">posts#all - get the latest posts</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_keyset_pagination_(faster_recommended)">posts#all - keyset pagination (faster &amp; recommended)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_paginate_with_offset_(slower)">posts#all - paginate with offset (slower)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_sort_by_created_at">posts#all - sort by created_at</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_see_all_posts_created_by_a_user">posts#all - See all posts created by a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_all_see_all_posts_made_by_a_user">posts#all - See all posts made by a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_show_get_details_of_a_post">posts#show - Get details of a post</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_show_response_contains_all_media">posts#show - Response contains all media</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_collect_add_a_post_to_a_collection">posts#collect - Add a post to a collection</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_collect_remove_a_post_from_a_collection">posts#collect - Remove a post from a collection</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/posts/posts_index_get_the_tech_posts_of_today">posts#index - Get the tech posts of today</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Users">
+                  Users
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Users">
+                  <li>
+                    <a href="/v1/docs/users/users_index_get_all_users">users#index - Get all users</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/users/users_index_get_all_users_`newer`_than_the_provided_id">users#index - Get all users `newer` than the provided id</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/users/users_show_get_details_of_a_user">users#show - Get details of a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/users/users_show_exclude_`relationships`">users#show - Exclude `relationships`</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Collections">
+                  Collections
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Collections">
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_get_newest_collections">collections#index - Get newest collections</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_filter_by_featured_collections">collections#index - Filter by Featured Collections</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_filter_by_username_and_or_slug">collections#index - Filter by username and/or slug</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_get_collections_a_user_follows">collections#index Get collections a user follows</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_get_the_latest_collections">collections#index - get the latest collections</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_keyset_pagination_(faster_recommended)">collections#index - keyset pagination (faster &amp; recommended)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_paginate_with_offset_(slower)">collections#index - paginate with offset (slower)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_sort_by_created_at">collections#index - sort by created_at</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_see_all_collections_created_by_a_user">collections#index - See all collections created by a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_index_get_all_collections_that_include_a_certain_post">collections#index - Get all collections that include a certain post</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_create_create_a_collection">collections#create - Create a collection</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collection_show_get_details_of_a_collection">collection#show - Get details of a collection</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_update_update_a_collection">collections#update - Update a collection</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/collections/collections_destroy_delete_a_collection">collections#destroy - Delete a collection</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Comments and Comment Threads">
+                  Comments and Comment Threads
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Comments and Comment Threads">
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_get_the_latest_comments">comments#index - get the latest comments</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_keyset_pagination_(faster_recommended)">comments#index - keyset pagination (faster &amp; recommended)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_paginate_with_offset_(slower)">comments#index - paginate with offset (slower)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_sort_by_created_at">comments#index - sort by created_at</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_fetch_all_comments_filtered_for_a_post_and_a_user">comments#index - Fetch all comments filtered for a post and a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_fetch_all_comments_filtered_for_an_ama_event">comments#index - Fetch all comments filtered for an ama_event</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_get_the_latest_comments">comments#index - get the latest comments</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_keyset_pagination_(faster_recommended)">comments#index - keyset pagination (faster &amp; recommended)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_paginate_with_offset_(slower)">comments#index - paginate with offset (slower)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_sort_by_created_at">comments#index - sort by created_at</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_fetch_comments_of_a_user_(not_nested)">comments#index - Fetch comments of a user (not nested)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_fetch_all_threads_of_a_post_(nested_and_sorted)">comments#index - Fetch all threads of a post (nested and sorted)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_index_fetch_all_threads_of_a_live_event_(nested_and_sorted)">comments#index - Fetch all threads of a live event (nested and sorted)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_create_create_a_new_comment">comments#create - Create a new comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_create_create_a_nested_reply_to_a_comment">comments#create - Create a nested reply to a comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_create_create_a_new_live_event_comment">comments#create - Create a new LIVE event comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_create_create_a_nested_reply_to_a_live_event_comment">comments#create - Create a nested reply to a LIVE event comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_update_update_a_comment">comments#update - Update a comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_votes_index_see_all_votes_for_a_comment">comments/votes#index - See all votes for a comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_votes_index_get_all_votes_`newer`_than_the_provided_id">comments/votes#index - Get all votes `newer` than the provided id</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/comments_votes_create_vote_for_a_comment">comments/votes#create - Vote for a comment</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/comments_and_comment_threads/votes_destroy_unvote_a_comment">votes#destroy - Unvote a comment</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Notifications">
+                  Notifications
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Notifications">
+                  <li>
+                    <a href="/v1/docs/notifications/notifications_show_receive_your_latest_notifications">notifications#show - Receive your latest notifications</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/notifications/notifications_destroy_clear_your_notifications_count">notifications#destroy - Clear your notifications count</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Vote.for_posts">
+                  Vote.for_posts
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Vote.for_posts">
+                  <li>
+                    <a href="/v1/docs/vote_for_posts/votes_create_vote_for_a_post">votes#create - Vote for a post</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/vote_for_posts/votes_destroy_unvote_a_post">votes#destroy - Unvote a post</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/vote_for_posts/votes_index_see_all_votes_for_a_post">votes#index - See all votes for a post</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/vote_for_posts/votes_index_get_all_votes_`newer`_than_the_provided_id">votes#index - Get all votes `newer` than the provided id</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/vote_for_posts/votes_index_see_all_votes_for_a_user">votes#index - See all votes for a user</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Settings">
+                  Settings
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Settings">
+                  <li>
+                    <a href="/v1/docs/settings/settings_show_get_your_own_details">settings#show - Get your own details</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/settings/settings_show_exclude_`relationships`">settings#show - Exclude `relationships`</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/settings/settings_update_update_your_details">settings#update - Update your details</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/settings/unprocessable_entity_settings_update_update_with_incorrect_values">unprocessable_entity: settings#update - Update with incorrect values</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Followers &amp; Followings">
+                  Followers &amp; Followings
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Followers &amp; Followings">
+                  <li>
+                    <a href="/v1/docs/followers_followings/followers_index_list_all_followers">followers#index - List all followers</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/followers_followings/followers_create_follow_a_user">followers#create - Follow a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/followers_followings/followers_destroy_un-follow_a_user">followers#destroy - Un-follow a user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/followers_followings/following_index_list_all_people_a_user_follows">following#index - List all people a user follows</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Current user">
+                  Current user
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Current user">
+                  <li>
+                    <a href="/v1/docs/current_user/me_interactions">me#interactions</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/current_user/me_interactions_several_interactions_at_once">me#interactions - Several interactions at once</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Subscribe to collections">
+                  Subscribe to collections
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Subscribe to collections">
+                  <li>
+                    <a href="/v1/docs/subscribe_to_collections/subscribe_create_subscribe_to_collection_as_logged_user">subscribe#create - Subscribe to collection as logged user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/subscribe_to_collections/subscribe_create_subscribe_to_collection_with_email">subscribe#create - Subscribe to collection with email</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/subscribe_to_collections/subscribe_destroy_unsubscribe_to_collection_as_logged_user">subscribe#destroy - Unsubscribe to collection as logged user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/subscribe_to_collections/subscribe_destroy_unsubscribe_to_collection_with_email">subscribe#destroy - Unsubscribe to collection with email</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="LIVE events">
+                  LIVE events
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="LIVE events">
+                  <li>
+                    <a href="/v1/docs/live_events/live_index_list_of_live_events">live#index - List of live events</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/live_events/live_index_filter_by_video">live#index - Filter by video</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/live_events/live_index_filter_by_month">live#index - Filter by month</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/live_events/live_index_filter_by_older">live#index - Filter by older</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/live_events/live_index_filter_by_slug">live#index - Filter by slug</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/live_events/live_index_paginate">live#index - Paginate</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/live_events/live_show_get_details_of_a_live_event">live#show - Get details of a live event</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Subscribe to LIVE events">
+                  Subscribe to LIVE events
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Subscribe to LIVE events">
+                  <li>
+                    <a href="/v1/docs/subscribe_to_live_events/subscribe_create_subscribe_to_live_event_as_logged_user">subscribe#create - Subscribe to LIVE event as logged user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/subscribe_to_live_events/subscribe_create_subscribe_to_live_event_with_email">subscribe#create - Subscribe to LIVE event with email</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/subscribe_to_live_events/subscribe_destroy_unsubscribe_to_live_event_as_logged_user">subscribe#destroy - Unsubscribe to LIVE event as logged user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/subscribe_to_live_events/subscribe_destroy_unsubscribe_to_live_event_with_email">subscribe#destroy - Unsubscribe to LIVE event with email</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Shareable Images">
+                  Shareable Images
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Shareable Images">
+                  <li>
+                    <a href="/v1/docs/shareable_images/shareable_image_show_generate_a_shareable_image_for_a_comment">shareable_image#show - Generate a shareable image for a comment</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Topics">
+                  Topics
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Topics">
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_list_topics">topics#index - List topics</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_paginate_topics">topics#index - Paginate topics</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_trending_topics">topics#index - Trending topics</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_filter_by_follower_id">topics#index - Filter by follower id</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_filter_by_slug">topics#index - Filter by slug</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_sort_by_updated_at">topics#index - Sort by updated_at</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_get_the_latest_topics">topics#index - get the latest topics</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_keyset_pagination_(faster_recommended)">topics#index - keyset pagination (faster &amp; recommended)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_paginate_with_offset_(slower)">topics#index - paginate with offset (slower)</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_index_sort_by_created_at">topics#index - sort by created_at</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/topics_show_get_details_of_a_topic">topics#show - Get details of a topic</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/follow_create_follow_collection_as_logged_user">follow#create - Follow collection as logged user</a>
+                  </li>
+                  <li>
+                    <a href="/v1/docs/topics/follow_destroy_unfollow_to_topic_as_logged_user">follow#destroy - Unfollow to topic as logged user</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Example Performance Tips">
+                  Example Performance Tips
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Example Performance Tips">
+                  <li>
+                    <a href="/v1/docs/example_performance_tips/use_the_e-tag_http_header">Use the E-Tag HTTP Header</a>
+                  </li>
+              </ul>
+            </li>
+            <li>
+              <li class="api--sidenav--heading">
+                <a href="#" data-collapsing-navigation-target="Rate Limits">
+                  Rate Limits
+                </a>
+              </li>
+              <ul class="api--sidenav--subnav"
+                data-collapsing-navigation="Rate Limits">
+                  <li>
+                    <a href="/v1/docs/rate_limits/headers">Headers</a>
+                  </li>
+              </ul>
+            </li>
+        </ul>
+
+        <div class="api--content">
+          <h2>Welcome to the Product Hunt API</h2>
+<p>
+  The goal of this API is to be RESTful and as simple as needed.
+</p>
+<p>
+  If you have any ideas for improvements or just wanna chat about JSON and HTTP verbs<br>
+  <a href="https://github.com/producthunt/producthunt-api/issues">let us know on GitHub</a>.
+</p>
+
+<h3>"Beta"</h3>
+<p>
+  We try to have no breaking changes, but please don't expect this API to be completely frozen.
+</p>
+
+<h3>Privileges</h3>
+<ul>
+  <li>By default <strong>all apps are read-only.</strong> </li>
+  <li>
+    Please understand that we currently do not provide write access (e.g. creating upvotes for a user) to third party developers.
+  </li>
+  <li>
+    The Product Hunt API must not be used for commercial purposes. If you would like to use it for
+    your business, please contact us at <a href="mailto:hello@producthunt.com">hello@producthunt.com</a>.
+  </li>
+</ul>
+
+<h3>Accessing Endpoints</h3>
+<ul>
+  <li>The API is reachable at https://api.producthunt.com/v1/&lt;ENDPOINT&gt;</li>
+  <li>Currently the API is only accessible with a provided <em>access_token</em>.</li>
+  <li>We reserve the right to rate-limit any application if we feel you are not following <strong>fair-use</strong>.</li>
+  <li>If you require faster access without rate limit please contact us.</li>
+</ul>
+
+<h3>Get started: Getting an OAuth2 token</h3>
+<p>Get a token on behalf of a user:</p>
+<ul>
+  <li>Follow the steps in <em>OAuth User Authentication</em> oauth#authorize to receive an access_grant</li>
+  <li>Use the access_grant in oauth#token</li>
+  <li>Add the <em>Authentication</em> http header with the token to all requests</li>
+  <li>Test this and troubleshoot according to the examples in oauth#test</li>
+</ul>
+
+<p>Get a token without user context. (eg before a user logs in)</p>
+<ul>
+  <li>Follow the steps explained in <em>OAuth Client Only Authentication</em> oauth#token</li>
+  <li>Please remember that this tokens limit you to public endpoints that don't require user context.</li>
+</ul>
+
+<p>But… i just wanted to run a simple script?</p>
+<ul>
+  <li>The oauth2 flow is a bit of a overkill if you just want to run a few scripts</li>
+  <li>
+    We provide a developer_token (does not expire, linked to your account) in the
+    <a href="https://www.producthunt.com/v1/oauth/applications">app dashboard</a>
+  </li>
+</ul>
+
+<h3>May I use the API for my business?</h3>
+<p>
+  By default the Product Hunt API must not be used for commercial purposes.
+  If you would like to use it for your business, please contact us at
+  <a href="mailto:hello@producthunt.com">hello@producthunt.com</a>.
+</p>
+
+<h3>Done building? Get featured!</h3>
+<p>
+  We’re excited to see what all you creative folks build and happy to feature your product on the site.
+  Contact us at <a href="mailto:hello@producthunt.com">hello@producthunt.com</a> with its name,
+  a couple sentence description, and link to the project.
+</p>
+
+<h3>Do I have to attribute Product Hunt?</h3>
+<p>
+  We kindly ask that you include attribution in your project, linking back to
+  <a href="http://www.producthunt.com">Product Hunt</a>.
+  We’d also appreciate those that include a Product Hunt logo (it’s helpful for us!).
+</p>
+<p>
+  You can <a href="https://s3.amazonaws.com/producthunt/ph_brand_assets.zip">download the goodies here</a>.
+</p>
+
+<h3>Are there any other ways to do Product Hunt Integrations?</h3>
+<p>
+  Yes! There is quite a bunch of third party APIs. Blazin' fast fulltext search,
+  SDKs with callbacks for real-time like interaction, web-hooks, etc etc.
+  Go here for the <a href="https://github.com/producthunt/producthunt-api/wiki/Product-Hunt-APIs">full list</a>.
+</p>
+<p>
+  Btw there is also a lot of Open Source software out there.
+  <a href="https://github.com/producthunt/producthunt-api/wiki/Code-Examples">Take a look</a>.
+  Maybe there is something you can reuse.
+</p>
+
+<h3>But…?</h3>
+<p>
+  If you have any more questions, feedback, ideas or problems don’t hesitate to contact us!
+  Also, let us know what you’re working on! Drop us a line at
+  <a href="mailto:hello@producthunt.com">hello@producthunt.com</a>.
+</p>
+<p>
+  Happy Hacking!
+</p>
+
+<small>
+  PS: Shout out to <a href="https://www.producthunt.com/albertoperdomo">@albertoperdomo</a> who helped with the API design.
+</small>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    $('[data-collapsing-navigation-target]').click(function(e) {
+      e.preventDefault();
+      var subgroup = $(e.target).data('collapsing-navigation-target');
+
+      $("[data-collapsing-navigation!='" + subgroup + "']").removeClass('m-active');
+      $("[data-collapsing-navigation='" + subgroup + "']").toggleClass('m-active');
+    });
+  </script>
+</body>
+</html>
