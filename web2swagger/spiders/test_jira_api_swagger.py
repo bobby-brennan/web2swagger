@@ -18,8 +18,28 @@ def describe_jira_swagger():
     resp = response_from("JIRA 6.1 REST API documentation.html")
     results = jira_api.parse_paths(resp)
 
+    def should_collect_number_of_paths():
+        assert len(results) == 120
+
+    def should_contain_apis():
+        assert '//reindex' in results
+        assert '/application-properties/{id}' in results
+        assert '/issue/{issueIdOrKey}/votes' in results
+        assert '/issue/{issueIdOrKey}/worklog' in results
+        assert '/attachment/meta' in results
+        assert '/application-properties/{id}' in results
+
+    def should_update_existsing_api_with_operation():
+        assert 'delete' in results['/component/{id}']
+        assert 'get' in results['/component/{id}']
+        assert 'put' in results['/component/{id}']
+
+        assert 'delete' in results['/group']
+        assert 'get' in results['/group']
+        assert 'post' in results['/group']
+
     def describe_basics_of_extraction():
-        endpoint = results['/rest/api/2/attachment/{id}']
+        endpoint = results['/attachment/{id}']
 
         def it_should_have_two_operations():
             assert len(endpoint) == 2
@@ -77,7 +97,7 @@ def describe_jira_swagger():
                 assert 'Returned if the attachment is not found' == delete_op['responses']['404']['description']
 
     def describe_extraction_of_api_with_acceptable_request_body():
-        endpoint = results['/rest/api/2/application-properties/{id}']
+        endpoint = results['/application-properties/{id}']
         operation = endpoint['put']
         parameter = operation['parameters'][0]
         
@@ -98,7 +118,7 @@ def describe_jira_swagger():
             assert operation['parameters'][1]['schema'] ==  {'required': [u'id', u'value'], 'type': 'object', 'properties': {u'id': {'type': 'string'}, u'value': {'type': 'string'}}}
 
     def describe_request_specific_parameters():
-        endpoint = results['/rest/api/2/application-properties']
+        endpoint = results['/application-properties']
         operation = endpoint['get']
 
         def it_should_have_three_parameters():
@@ -106,39 +126,39 @@ def describe_jira_swagger():
             assert ['key', 'permissionLevel', 'keyFilter'] == [x['name'] for x in operation['parameters']]
 
     def describe_parameter_types_conversion():
-        endpoint = results['/rest/api/2/dashboard']
+        endpoint = results['/dashboard']
         operation = endpoint['get']
 
         def should_convert_int_to_integer():
             assert operation['parameters'][1]['type'] == 'integer'
 
         def should_convert_long_to_integer():
-            endpoint = results['/rest/api/2/filter/{id}']
+            endpoint = results['/filter/{id}']
             operation = endpoint['get']
 
             assert operation['parameters'][0]['type'] == 'integer'
 
         def should_extract_only_boolean_value_and_no_other_strings():
-            endpoint = results['/rest/api/2/search']
+            endpoint = results['/search']
             operation = endpoint['get']
 
             assert operation['parameters'][3]['type'] == 'boolean'
 
     def describe_parameter():
-        endpoint = results['/rest/api/2/attachment/{id}']
+        endpoint = results['/attachment/{id}']
         operation = endpoint['get']
 
         def it_should_have_required_set_as_true_for_in_path():
             assert operation['parameters'][0]['required'] == True
 
         def it_should_have_no_required_for_in_query():
-            endpoint = results['/rest/api/2/password/policy']
+            endpoint = results['/password/policy']
             operation = endpoint['get']
 
             assert 'required' not in operation['parameters'][0]
 
         def it_should_have_no_duplicate_keys():
-            endpoint = results['/rest/api/2/project/{projectIdOrKey}/role/{id}']
+            endpoint = results['/project/{projectIdOrKey}/role/{id}']
             operation = endpoint['put']
 
             parameter_names_count = {}
@@ -152,14 +172,14 @@ def describe_jira_swagger():
             assert parameter_names_count['id'] == 1
 
         def it_should_change_formData_to_query():
-            endpoint = results['/rest/api/2/user']
+            endpoint = results['/user']
             operation = endpoint['put']
 
             assert operation['parameters'][0]['in'] == 'query'
 
     def describe_regressions_and_errors():
         def should_return_parameters_schema_that_is_invalid_json():
-            item = results['/rest/api/2/project/{projectIdOrKey}/role/{id}']
+            item = results['/project/{projectIdOrKey}/role/{id}']
             assert ['delete', 'get', 'post', 'put'] == sorted(item.keys())
 
             post_item = item['post']
@@ -168,26 +188,26 @@ def describe_jira_swagger():
             assert post_item['parameters'][2] == {'schema': {'anyOf': [{'required': [u'user'], 'type': 'object', 'properties': {u'user': {'items': {'type': 'string'}, 'type': 'array'}}}, {'required': [u'group'], 'type': 'object', 'properties': {u'group': {'items': {'type': 'string'}, 'type': 'array'}}}]}, 'name': 'body', 'in': 'body'}
 
     def describe_schemas():
-        endpoint = results['/rest/api/2/password/policy']
+        endpoint = results['/password/policy']
         operation = endpoint['get']
 
         def it_should_have_no_schema():
             assert 'schema' not in operation['responses']['200']
 
         def it_should_have_schema():
-            endpoint = results['/rest/api/2/statuscategory']
+            endpoint = results['/statuscategory']
             operation = endpoint['get']
 
             assert 'schema' in operation['responses']['200']
 
         def it_should_not_include_schema_that_is_not_json():
-            endpoint = results['/rest/api/2/settings/baseUrl']
+            endpoint = results['/settings/baseUrl']
             operation = endpoint['put']
 
             assert operation['parameters'] == []
 
         def it_should_return_valid_schema_that_has_seperated_json():
-            endpoint = results['/rest/api/2/project/{projectIdOrKey}/role/{id}']
+            endpoint = results['/project/{projectIdOrKey}/role/{id}']
             operation = endpoint['post']
             assert 'anyOf' in operation['parameters'][2]['schema']
             assert operation['parameters'][2]['schema']['anyOf'][0] == {'required': [u'user'], 'type': 'object', 'properties': {u'user': {'items': {'type': 'string'}, 'type': 'array'}}}
@@ -210,7 +230,7 @@ def describe_jira_swagger():
                 <div class="toggle" id="d2e179">
                 <p></p>
                 <h6>Example</h6>
-                <pre><code>{"self":"http://www.example.com/jira/rest/api/2.0/attachments/10000","filename":"picture.jpg","author":{"self":"http://www.example.com/jira/rest/api/2/user?username=fred","name":"fred","avatarUrls":{"24x24":"http://www.example.com/jira/secure/useravatar?size=small&amp;ownerId=fred","16x16":"http://www.example.com/jira/secure/useravatar?size=xsmall&amp;ownerId=fred","32x32":"http://www.example.com/jira/secure/useravatar?size=medium&amp;ownerId=fred","48x48":"http://www.example.com/jira/secure/useravatar?size=large&amp;ownerId=fred"},"displayName":"Fred F. User","active":false},"created":"2013-08-23T16:57:35.977+0200","size":23123,"mimeType":"image/jpeg","content":"http://www.example.com/jira/attachments/10000","thumbnail":"http://www.example.com/jira/secure/thumbnail/10000"}</code></pre>
+                <pre><code>{"self":"http://www.example.com/jira.0/attachments/10000","filename":"picture.jpg","author":{"self":"http://www.example.com/jira/user?username=fred","name":"fred","avatarUrls":{"24x24":"http://www.example.com/jira/secure/useravatar?size=small&amp;ownerId=fred","16x16":"http://www.example.com/jira/secure/useravatar?size=xsmall&amp;ownerId=fred","32x32":"http://www.example.com/jira/secure/useravatar?size=medium&amp;ownerId=fred","48x48":"http://www.example.com/jira/secure/useravatar?size=large&amp;ownerId=fred"},"displayName":"Fred F. User","active":false},"created":"2013-08-23T16:57:35.977+0200","size":23123,"mimeType":"image/jpeg","content":"http://www.example.com/jira/attachments/10000","thumbnail":"http://www.example.com/jira/secure/thumbnail/10000"}</code></pre>
                 <p>Returns a JSON representation of the attachment meta-data. The representation does not contain the
                       attachment itself, but contains a URI that can be used to download the actual attached file.</p>
                 <div class="representation"></div>
@@ -259,13 +279,13 @@ def describe_jira_swagger():
         def should_split_by_css_path_2():
             operation_html = """
                 <div class="resource">
-                    <h3 id="d2e3476">/rest/api/2/user</h3>
+                    <h3 id="d2e3476">/user</h3>
                     <h6>Methods</h6>
                     <div class="methods">
                     <div class="method">
                     <h4 id="d2e3477">GET 
                                     </h4>
-                    <h6>/rest/api/2/user<span class="optional">?username</span><span class="optional">&amp;key</span>
+                    <h6>/user<span class="optional">?username</span><span class="optional">&amp;key</span>
                     </h6>
                     <p>Returns a user. This resource cannot be accessed anonymously.</p>
                     <h6>request query parameters</h6>
@@ -295,7 +315,7 @@ def describe_jira_swagger():
                     <div class="toggle" id="d2e3491">
                     <p></p>
                     <h6>Example</h6>
-                    <pre><code>{"self":"http://www.example.com/jira/rest/api/2/user?username=fred","name":"fred","emailAddress":"fred@example.com","avatarUrls":{"24x24":"http://www.example.com/jira/secure/useravatar?size=small&amp;ownerId=fred","16x16":"http://www.example.com/jira/secure/useravatar?size=xsmall&amp;ownerId=fred","32x32":"http://www.example.com/jira/secure/useravatar?size=medium&amp;ownerId=fred","48x48":"http://www.example.com/jira/secure/useravatar?size=large&amp;ownerId=fred"},"displayName":"Fred F. User","active":true,"timeZone":"Australia/Sydney","groups":{"size":3,"items":[]}}</code></pre>
+                    <pre><code>{"self":"http://www.example.com/jira/user?username=fred","name":"fred","emailAddress":"fred@example.com","avatarUrls":{"24x24":"http://www.example.com/jira/secure/useravatar?size=small&amp;ownerId=fred","16x16":"http://www.example.com/jira/secure/useravatar?size=xsmall&amp;ownerId=fred","32x32":"http://www.example.com/jira/secure/useravatar?size=medium&amp;ownerId=fred","48x48":"http://www.example.com/jira/secure/useravatar?size=large&amp;ownerId=fred"},"displayName":"Fred F. User","active":true,"timeZone":"Australia/Sydney","groups":{"size":3,"items":[]}}</code></pre>
                     <p>Returns a full representation of a JIRA user in JSON format.</p>
                     <div class="representation"></div>
                     </div>
@@ -318,7 +338,7 @@ def describe_jira_swagger():
                     <h4 id="d2e3504">PUT 
                                     <a href="#experimental">(experimental)</a>
                     </h4>
-                    <h6>/rest/api/2/user<span class="optional">?username</span><span class="optional">&amp;key</span>
+                    <h6>/user<span class="optional">?username</span><span class="optional">&amp;key</span>
                     </h6>
                     <p>Modify user. The "value" fields present will override the existing value.
                      Fields skipped in request will not be changed.</p>
@@ -360,7 +380,7 @@ def describe_jira_swagger():
                     <div class="toggle" id="d2e3526">
                     <p></p>
                     <h6>Example</h6>
-                    <pre><code>{"self":"http://www.example.com/jirahttp://www.example.com/jira/rest/api/2/user/charlie","key":"charlie","name":"charlie","emailAddress":"charlie@atlassian.com","displayName":"Charlie of Atlassian"}</code></pre>
+                    <pre><code>{"self":"http://www.example.com/jirahttp://www.example.com/jira/user/charlie","key":"charlie","name":"charlie","emailAddress":"charlie@atlassian.com","displayName":"Charlie of Atlassian"}</code></pre>
                     <p>Returned if the user exists and the caller has permission to edit it.</p>
                     <div class="representation"></div>
                     </div>
@@ -411,7 +431,7 @@ def describe_jira_swagger():
                     <div class="toggle" id="d2e3555">
                     <p></p>
                     <h6>Example</h6>
-                    <pre><code>{"self":"http://www.example.com/jirahttp://www.example.com/jira/rest/api/2/user/charlie","key":"charlie","name":"charlie","emailAddress":"charlie@atlassian.com","displayName":"Charlie of Atlassian"}</code></pre>
+                    <pre><code>{"self":"http://www.example.com/jirahttp://www.example.com/jira/user/charlie","key":"charlie","name":"charlie","emailAddress":"charlie@atlassian.com","displayName":"Charlie of Atlassian"}</code></pre>
                     <p>Returned if the user was created.</p>
                     </div>
                     </li>
@@ -439,7 +459,7 @@ def describe_jira_swagger():
                     <h4 id="d2e3574">DELETE 
                                     <a href="#experimental">(experimental)</a>
                     </h4>
-                    <h6>/rest/api/2/user<span class="optional">?username</span><span class="optional">&amp;key</span>
+                    <h6>/user<span class="optional">?username</span><span class="optional">&amp;key</span>
                     </h6>
                     <p>Removes user.</p>
                     <h6>request query parameters</h6>
@@ -496,17 +516,12 @@ def describe_jira_swagger():
             sub_selectors = jira_api.extractExtractorResults(sel, jira_api.config.get('operation'))
             assert len(sub_selectors) == 4
 
-    def should_find_key_value():
-        assert jira_api.is_value_exists_in_list_of_dicts(
-            [{'required': True, 'in': 'path', 'type': u'string', 'name': u'projectIdOrKey', 'description': u'the project id or project key'}],
-            'name', 'projectIdOrKey')
-
     def should_return_security_definitions():
         jira_api.parse_apis_info(resp)
         assert jira_api.swagger['securityDefinitions']['HTTP Basic'] =={'type': 'basic'}
 
     def describe_missing_responses():
-        endpoint = results['/rest/api/2/settings/baseUrl']
+        endpoint = results['/settings/baseUrl']
         operation = endpoint['put']
 
         def should_have_default_response():

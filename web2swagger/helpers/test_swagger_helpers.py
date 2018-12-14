@@ -71,8 +71,7 @@ def describe_swagger_helpers():
             assert convert_to_valid_type('List') == 'string'
             assert convert_to_valid_type('MemberSelector') == 'string'
 
-    @pytest.mark.skip('Replacement of definitions turns out to be invalid json')
-    def describe_fixSchema():
+    def describe_fixSchemaDefinitions():
         json_data = {
                         "title": "Content Body", 
                         "id": "https://docs.atlassian.com/jira/REST/schema/content-body#", 
@@ -658,31 +657,37 @@ def describe_swagger_helpers():
                         }
                     }
 
+        fixed_schema = fixSchemaDefinition(json_data)
         definitions = json_data.get('definitions')
-        fixed_schema = fixSchemaDefinitions(json_data)
 
+        def should_fix_type_to_string_for_missing_object_properties():
+            assert fixed_schema['definitions']['html-string']['type'] == 'string'
+            assert fixed_schema['definitions']['content-representation']['type'] == 'string'
 
-        def should_be_valid_schema():
-            is_valid = False
-            try:
-                json.loads(str(fixed_schema))
-                is_valid = True
-            except:
-                pass
+        def should_not_convert_type_to_string_for_existing_object_properties():
+            assert fixed_schema['definitions']['unknown-user']['type'] == 'object'
 
-            assert is_valid
+        # def should_be_valid_schema():
+        #     is_valid = False
+        #     try:
+        #         json.loads(str(fixed_schema))
+        #         is_valid = True
+        #     except:
+        #         pass
 
-        def should_set_definitions_in_parameter_ref():
-            assert '$ref' not in fixed_schema["properties"]["content"]["items"]
-            assert fixed_schema["properties"]["content"]["items"] == definitions["content"]
-            assert '$ref' not in fixed_schema["properties"]["webresource"]["items"]
-            assert fixed_schema["properties"]["webresource"]["items"] == definitions["web-resource-dependencies"]
+        #     assert is_valid
+
+        # def should_set_definitions_in_parameter_ref():
+        #     assert '$ref' not in fixed_schema["properties"]["content"]["items"]
+        #     assert fixed_schema["properties"]["content"]["items"] == definitions["content"]
+        #     assert '$ref' not in fixed_schema["properties"]["webresource"]["items"]
+        #     assert fixed_schema["properties"]["webresource"]["items"] == definitions["web-resource-dependencies"]
         
-        def should_remove_definitions():
-            assert 'definitions' not in fixed_schema
+        # def should_remove_definitions():
+        #     assert 'definitions' not in fixed_schema
 
-        def should_remove_id():
-            assert 'id' not in fixed_schema
+        # def should_remove_id():
+        #     assert 'id' not in fixed_schema
 
     def describe_extraction_of_definitions_from_schema():
         json_data = {
@@ -1286,3 +1291,8 @@ def describe_swagger_helpers():
             assert 'user' in definitions
             assert 'anonymous' in definitions
             assert 'icon' in definitions
+
+    def should_find_key_value():
+        assert is_value_exists_in_list_of_dicts(
+            [{'required': True, 'in': 'path', 'type': u'string', 'name': u'projectIdOrKey', 'description': u'the project id or project key'}],
+            'name', 'projectIdOrKey')

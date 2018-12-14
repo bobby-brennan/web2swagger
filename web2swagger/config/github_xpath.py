@@ -26,14 +26,9 @@ config = {
   'responseStatus': {'selector': './/pre[contains(@class, "highlight-headers")]', 'regex': r'Status: (\d+) ', 'sibling': True, 'type': 'xpath'},
   'responseDescription': {'selector': './/pre[contains(@class, "highlight-headers")]', 'regex': r'Status: \d+ (.*)', 'sibling': True, 'type': 'xpath'},
   'responseSchema': {'selector': './/pre[contains(@class, "highlight-json")]', 'isExample': True, 'sibling': True, 'type': 'xpath'},
-  'defaultParameterLocations': {
-    'put': 'field',
-    'post': 'field',
-    'patch': 'field',
-  },
 }
 
-def fixPathParameters(path):
+def fixPathString(path):
     pieces = path.split('/')
     new_pieces = []
     for p in pieces:

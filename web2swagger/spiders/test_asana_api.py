@@ -115,7 +115,7 @@ def describe_swagger_spider_1():
 
         def should_return_security_definitions():
             to_test.swagger_app.parse_apis_info(resp)
-            assert to_test.swagger_app.swagger['securityDefinitions'] == {'OAuth 2': {'flow': 'accessCode', 'tokenUrl': u'https://app.asana.com/-/oauth_token', 'type': 'oauth2', 'authorizationUrl': u'https://app.asana.com/-/oauth_authorize?client_id=123&redirect_uri=https://myapp.com/oauth&response_type=token&state=somerandomstate', 'scopes': {'default': u'Provides access to all endpoints documented in our API reference. If no scopes are requested, this scope is assumed by default.', 'openid': u'Provides access to OpenID Connect ID tokens and the OpenID Connect user info endpoint.', 'profile': u'Provides access to the users name and profile photo through the OpenID Connect user info endpoint.', 'email': u'Provides access to the users email through the OpenID Connect user info endpoint.'}}}
+            assert to_test.swagger_app.swagger['securityDefinitions'] == {'OAuth 2': {'flow': 'accessCode', 'tokenUrl': u'https://app.asana.com/-/oauth_token', 'type': 'oauth2', 'authorizationUrl': u'https://app.asana.com/-/oauth_authorize', 'scopes': {'default': u'Provides access to all endpoints documented in our API reference. If no scopes are requested, this scope is assumed by default.', 'openid': u'Provides access to OpenID Connect ID tokens and the OpenID Connect user info endpoint.', 'profile': u'Provides access to the users name and profile photo through the OpenID Connect user info endpoint.', 'email': u'Provides access to the users email through the OpenID Connect user info endpoint.'}}}
 
     def describe_docs_page_2():
         resp = response_from("asana_tags.html")
@@ -137,17 +137,28 @@ def describe_swagger_spider_1():
             assert operation['parameters'][0]['name'] == 'tag_gid'
             assert operation['parameters'][0]['description'] == 'The tag to get.'
 
+        @pytest.mark.skip("Removed attribute from task LS-5122")
         def should_set_required_to_true_if_():
             endpoint = results['/tags/{tag_gid}']
             operation = endpoint['put']
 
             assert operation['parameters'][0]['required'] == True
 
+        @pytest.mark.skip("Removed attribute from task LS-5122")
         def should_set_required_to_false_if_not_stated_on_parameter():
             endpoint = results['/tags']
             operation = endpoint['get']
 
             assert operation['parameters'][0]['required'] == False
+
+        def should_contain_no_required_key_in_parameters():
+            endpoint = results['/tags']
+            operation = endpoint['get']
+            assert 'required' not in operation['parameters'][0]
+
+            endpoint = results['/tags/{tag_gid}']
+            operation = endpoint['put']
+            assert 'required' not in operation['parameters'][0]
 
         def should_set_in_path_for_parameters_found_in_path():
             endpoint = results['/tags/{tag_gid}']
@@ -163,7 +174,7 @@ def describe_swagger_spider_1():
         def should_return_only_one_response_per_status():
             endpoint = results['/projects']
             operation = endpoint['post']
-            
+
             assert operation['responses']['200']['description'] == ''
             assert operation['responses']['200']['schema'] == {'required': [u'data'], 'type': 'object', 'properties': {u'data': {'type': 'object'}}}
 
@@ -172,4 +183,89 @@ def describe_swagger_spider_1():
             operation = endpoint['get']
 
             assert operation['responses']['200']['description'] == ''
-            assert operation['responses']['200']['schema'] == {'required': [u'data'], 'type': 'object', 'properties': {u'data': {'required': [u'gid', u'id', u'name', u'notes', u'null'], 'type': 'object', 'properties': {u'notes': {'type': 'string'}, u'gid': {'type': 'string'}, u'null': {'type': 'string'}, u'id': {'type': 'integer'}, u'name': {'type': 'string'}}}}}
+            assert operation['responses']['200']['schema'] == {'required': [u'data'], 'type': 'object', 'properties': {u'data': {'required': [u'gid', u'id', u'name', u'notes', u'null', u'resource_type'], 'type': 'object', 'properties': {u'name': {'type': 'string'}, u'notes': {'type': 'string'}, u'gid': {'type': 'string'}, u'null': {'type': 'string'}, u'id': {'type': 'integer'}, u'resource_type': {'type': 'string'}}}}}
+
+        def should_contain_operation_description():
+            assert results['/projects']['post']['description'] == 'Creates a new project in a workspace or team.'
+            assert results['/projects/{project_gid}']['get']['description'] == 'Returns the complete project record for a single project.'
+            assert results['/projects/{project_gid}']['put']['description'] == 'A specific, existing project can be updated by making a PUT request on the URL for that project. Only the fields provided in the data block will be updated; any unspecified fields will remain unchanged.'
+
+        def should_add_parameters_of_main_operation_to_path_parameters_with_no_readonly_and_type_is_not_formData():
+            assert len(results['/projects']['post']['parameters']) == 12
+            assert  results['/projects']['post']['parameters'][0]['name'] == 'workspace'
+            assert  results['/projects']['post']['parameters'][0]['in'] == 'formData'
+            assert  results['/projects']['post']['parameters'][1]['name'] == 'team'
+            assert  results['/projects']['post']['parameters'][1]['in'] == 'formData'
+            assert  results['/projects']['post']['parameters'][2]['name'] == 'name'
+            assert  results['/projects']['post']['parameters'][3]['name'] == 'owner'
+            assert  results['/projects']['post']['parameters'][4]['name'] == 'due_date'
+            assert  results['/projects']['post']['parameters'][5]['name'] == 'start_on'
+            assert  results['/projects']['post']['parameters'][6]['name'] == 'archived'
+            assert  results['/projects']['post']['parameters'][7]['name'] == 'public'
+            assert  results['/projects']['post']['parameters'][8]['name'] == 'color'
+            assert  results['/projects']['post']['parameters'][9]['name'] == 'notes'
+            assert  results['/projects']['post']['parameters'][10]['name'] == 'html_notes'
+            assert  results['/projects']['post']['parameters'][11]['name'] == 'layout'
+
+        def should_add_post_parameters_with_put_parameters():
+            to_test.swagger_app.fix_all_paths(results)
+            assert len(results['/projects/{project_gid}']['put']['parameters']) == 13
+            assert results['/projects/{project_gid}']['put']['parameters'][0]['name'] == 'project_gid'
+            assert results['/projects/{project_gid}']['put']['parameters'][0]['in'] == 'path'
+            assert results['/projects/{project_gid}']['put']['parameters'][1]['name'] == 'name'
+            assert results['/projects/{project_gid}']['put']['parameters'][2]['name'] == 'owner'
+            assert results['/projects/{project_gid}']['put']['parameters'][3]['name'] == 'due_date'
+            assert results['/projects/{project_gid}']['put']['parameters'][4]['name'] == 'start_on'
+            assert results['/projects/{project_gid}']['put']['parameters'][5]['name'] == 'archived'
+            assert results['/projects/{project_gid}']['put']['parameters'][6]['name'] == 'public'
+            assert results['/projects/{project_gid}']['put']['parameters'][7]['name'] == 'color'
+            assert results['/projects/{project_gid}']['put']['parameters'][8]['name'] == 'notes'
+            assert results['/projects/{project_gid}']['put']['parameters'][9]['name'] == 'html_notes'
+            assert results['/projects/{project_gid}']['put']['parameters'][10]['name'] == 'workspace'
+            assert results['/projects/{project_gid}']['put']['parameters'][11]['name'] == 'team'
+            assert results['/projects/{project_gid}']['put']['parameters'][12]['name'] == 'layout'
+
+    def describe_docs_page_4():
+        resp = response_from("asana_attachments.html")
+        results = to_test.swagger_app.parse_paths(resp)
+
+        def should_collect_number_of_paths():
+            assert len(results) == 2
+
+        def should_contain_apis():
+            assert '/tasks/{task_gid}/attachments' in results
+            assert '/attachments/{attachment_gid}' in results
+
+        def should_update_existsing_api_with_operation():
+            assert 'get' in results['/tasks/{task_gid}/attachments']
+            assert 'post' in results['/tasks/{task_gid}/attachments']
+
+            assert 'get' in results['/attachments/{attachment_gid}']
+
+        def should_set_proper_parameter_in_value_for_post():
+            item = results['/tasks/{task_gid}/attachments']['post']
+            assert item['parameters'][0]['in'] == 'path'
+            assert item['parameters'][0]['name'] == 'task_gid'
+
+            assert item['parameters'][1]['in'] == 'formData'
+            assert item['parameters'][1]['name'] == 'file'
+
+        def should_set_proper_parameter_in_value_for_get():
+            item = results['/tasks/{task_gid}/attachments']['get']
+            assert item['parameters'][0]['in'] == 'path'
+
+    def describe_docs_page_5():
+        resp = response_from("asana_tasks.html")
+        results = to_test.swagger_app.parse_paths(resp)
+
+        def should_contain_apis():
+            assert '/tasks' in results
+            assert '/tasks/{task_gid}' in results
+
+        def should_add_post_parameters_with_put_parameters():
+            to_test.swagger_app.fix_all_paths(results)
+
+            assert len(results['/tasks/{task_gid}']['put']['parameters']) == 18
+            assert results['/tasks/{task_gid}']['put']['parameters'][0]['name'] == u'task_gid'
+            assert results['/tasks/{task_gid}']['put']['parameters'][0]['in'] == u'path'
+            

@@ -23,15 +23,12 @@ config = {
   'responseStatus': {'selector': '.representation-name > b', 'regex': r' (\d+)'},
   'responseDescription': {'selector': '.representation-name > i::text, .representation-doc:not(h6:contains(Example))::text'},
   'responseSchema': {'selector': '.representation-doc > .representation-doc-block > h6:contains(Schema) ~ pre > code'},
-
-  'defaultParameterLocations': {
-    'put': 'field',
-    'post': 'field',
-    'patch': 'field',
-  },
 }
 
-def fixPathParameters(path):    
+def fixPathString(path):
+    path = path.replace('/rest/', '').strip()
+    if not path.startswith('/'):
+      path = '/' + path
     return path
 
 def fixParameterType(type):
@@ -39,13 +36,12 @@ def fixParameterType(type):
     type = 'integer'
   return type
 
+def fixPathParameters(parameters):
+    return parameters
 
 config.update({'securityDefinitions': {
-    'ApiKeyAuth': {
-      'type': 'apiKey',
-      'in': 'header',
-      'name': 'ACCESS_TOKEN',
-      "description": "a bearer token, including the prefix 'Bearer', e.g. 'Bearer abcde'"
+    'HTTP Basic': {
+      'type': 'basic'
     }
   }
 })

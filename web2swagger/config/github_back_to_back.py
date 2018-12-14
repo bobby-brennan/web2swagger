@@ -24,15 +24,9 @@ config = {
   'responseStatus': {'selector': 'pre.highlight-headers', 'regex': r'Status: (\d+) ', 'sibling': True},
   'responseDescription': {'selector': 'pre.highlight-headers', 'regex': r'Status: \d+ (.*)', 'sibling': True},
   'responseSchema': {'selector': 'pre.highlight-json', 'isExample': True, 'sibling': True},
-
-  'defaultParameterLocations': {
-    'put': 'field',
-    'post': 'field',
-    'patch': 'field',
-  },
 }
 
-def fixPathParameters(path):
+def fixPathString(path):
     pieces = path.split('/')
     new_pieces = []
     for p in pieces:
@@ -40,3 +34,6 @@ def fixPathParameters(path):
         p = p.replace(':', '{') + '}'
       new_pieces.append(p)
     return '/'.join(new_pieces)
+
+def fixPathParameters(parameters):
+    return parameters

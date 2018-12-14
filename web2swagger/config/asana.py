@@ -10,6 +10,7 @@ config = {
   'description': 'ASANA Developers API',
   'operations': {'selector': '.tab-content'},
   'operation': {'selector': 'pre[code/@class="nohighlight"]', 'split': True, 'type': 'xpath'},
+  'operationDescription': {'selector': './/p[1]//text()', 'type': 'xpath'},
   'path': {'selector': 'pre:first-of-type > code::text', 'regex': r'\w+ (.*\S\w+\}?)'},
   'method': {'selector': 'pre:first-of-type > code::text', 'regex': r'(\w+) .*'},
   'parameters': {'selector': 'pre:first-of-type ~ table'},
@@ -17,25 +18,33 @@ config = {
   'parameterName': {'selector': 'td:first-of-type'},
   'parameterDescription': {'selector': 'td:nth-of-type(2)::text'},
   'parameterRequired': {'selector': 'td:nth-of-type(2) > strong'},
+  'parameterReadOnly': {'selector': 'td:nth-of-type(2) > strong'}, 
   'responses': {'selector': 'pre > code:contains("# Response")'},
   'responseStatus': {'selector': 'code', 'regex': r'( \d+)\s\{'},
   'responseSchema': {'selector': 'code', 'regex': r'(\{(\s*.+?\s)*\})', 'isExample': True},
-
-  'defaultParameterLocations': {
-    'put': 'field',
-    'post': 'field',
-    'patch': 'field',
+  'globalExtractors': {
+    'parameters': {'selector': 'h5[id^="fields"] + table'},
+    'parameter': {'selector': 'tbody tr'},
+    'parameterName': {'selector': 'td:first-of-type'},
+    'parameterDescription': {'selector': 'td:nth-of-type(2)::text'},
+    'parameterRequired': {'selector': 'td:nth-of-type(2) > strong'},
+    'parameterReadOnly': {'selector': 'td:nth-of-type(2) > strong'}, 
   },
 }
 
-def fixPathParameters(path):
+def fixPathString(path):
     return path
+
+def fixPathParameters(parameters):
+    for param in parameters:
+      param.pop('required', None)
+    return parameters
 
 config.update({'securityDefinitions': {
     'OAuth 2': {
       'type': 'oauth2',
       'flow': 'accessCode',
-      "authorizationUrl": u"https://app.asana.com/-/oauth_authorize?client_id=123&redirect_uri=https://myapp.com/oauth&response_type=token&state=somerandomstate",
+      "authorizationUrl": u"https://app.asana.com/-/oauth_authorize",
       "tokenUrl": u"https://app.asana.com/-/oauth_token",
       "scopes": {
         "default": u"Provides access to all endpoints documented in our API reference. If no scopes are requested, this scope is assumed by default.",

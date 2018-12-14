@@ -22,23 +22,54 @@ config = {
   'responseStatus': {'selector': 'code:first-of-type', 'default': '200', 'regex': r'(\d+)'},
   'responseDescription': {'selector': 'code:first-of-type', 'regex': r'\d+ (.*)'},
   'responseSchema': {'selector': '.highlight-source-json > pre', 'sibling': True, 'isExample': True},
-
   'defaultParameterLocations': {
-    'put': 'field',
-    'post': 'field',
-    'patch': 'field',
+    'put': 'field'
   },
 }
 
-def fixPathParameters(path):
+def fixPathString(path):
     pieces = path.split('/')
     new_pieces = []
-    for x in pieces:
+    for idx, x in enumerate(pieces):
+      if 'CHATBOT_KEY' in x:
+        x = 'chatbotKey'
       if ':' in x:
         new_pieces.append('{%s}' % x.replace(':', '').strip())
       else:
+        key_splits = x.split('.')
+        key = key_splits[0]
+        if is_number(key):
+          prev_idx = idx - 1
+          if prev_idx >= 0:
+            prev_text = pieces[prev_idx]
+            if prev_text.endswith('s'):
+              prev_text = prev_text[:-1]
+            newKey = '{%sId}%s' % (prev_text, '.' + key_splits[1] if len(key_splits) > 1 else '')
+            new_pieces.append(newKey.strip())
+            continue
         new_pieces.append(x)
     return '/'.join(new_pieces)
+
+def fixPathSchema(schema_data):
+  if isinstance(schema_data, dict) and 'required' in schema_data and isinstance(schema_data['required'], list):
+    schema_data.pop('required', None)
+    
+  if isinstance(schema_data, list):
+      for idx, x in enumerate(schema_data):
+        fixPathSchema(schema_data[idx])
+  if isinstance(schema_data, dict):
+      for x, data in schema_data.items():
+        fixPathSchema(schema_data[x])
+  return schema_data
+
+def is_number(nbr_txt):
+  result = False
+  try:
+    int(nbr_txt)
+    result = True
+  except:
+    pass
+  return result
 
 config.update({'securityDefinitions': {
     'ApiKeyAuth': {
@@ -50,8 +81,9 @@ config.update({'securityDefinitions': {
     'OAuth 2': {
       'type': 'oauth2',
       'flow': 'accessCode',
-      "authorizationUrl": "https://launchpad.37signals.com/authorization/new",
-      "tokenUrl": "https://launchpad.37signals.com/authorization/token"
+      "authorizationUrl": "https://launchpad.37signals.com/authorization/new?type=web_server",
+      "tokenUrl": "https://launchpad.37signals.com/authorization/token?type=web_server"
     }
   }
 })
+

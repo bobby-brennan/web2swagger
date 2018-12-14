@@ -23,7 +23,7 @@ config = {
     }
 }
 
-def fixPathParameters(path):
+def fixPathString(path):
   pieces = path.split('/')
   params = []
 

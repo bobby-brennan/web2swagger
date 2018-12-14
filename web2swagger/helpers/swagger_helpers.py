@@ -89,16 +89,21 @@ def fixSchema(schema):
         return schema
 
     schema.pop('$schema', None)
+    schema.pop('id', None)
 
+    _remove_none_value(schema)
+
+    return schema
+
+def _remove_none_value(schema):
     if 'required' in schema and not schema['required']:
         schema.pop('required', None)
 
     for key in schema.get('properties', []):
-        fixSchema(schema['properties'][key])
+        _remove_none_value(schema['properties'][key])
 
     if 'items' in schema:
-        fixSchema(schema['items'])
-
+        _remove_none_value(schema['items'])
     return schema
 
 def extract_schema_definitions(schema):
@@ -109,45 +114,14 @@ def extract_schema_definitions(schema):
 
     return definitions
 
-def fixSchemaDefinitions(schema):
-    schema =_fixDefinition(schema, schema.get('definitions'))
-    if 'definitions' in schema:
-        schema.pop('definitions', None)
-
+def fixSchemaDefinition(schema):
+    for key, data in schema.get('definitions', {}).items():
+        if data.get('type') == 'object' and 'properties' not in data:
+            data['type'] = 'string'
     return schema
 
-def _fixDefinition(schema, definition):
-    if isinstance(schema, list):
-        for idx, x in enumerate(schema):
-            schema[idx] = _fixref(x, definition)
-
-    if isinstance(schema, dict):
-        for x, data in schema.items():
-            schema[x] = _fixref(data, definition)
-
-    return schema
-
-def _fixref(schema, definition):
-    if isinstance(schema, dict):
-        if '$ref' in schema:
-            if definition:
-                values = schema['$ref'].split('#/definitions/')
-                if len(values) > 1:
-                    def_val = values[1]
-                else:
-                    def_val = values[0]
-
-                if def_val in definition:
-                    # schema['$ref'] = definition[def_val]
-                    popref = schema.pop('$ref', None)
-                    if popref:
-                        schema.update(definition[def_val])
-                else:
-                    schema['$ref'] = ""
-        else:
-            schema = _fixDefinition(schema, definition)
-
-    if isinstance(schema, list):
-        schema = _fixDefinition(schema, definition)
-
-    return schema
+def is_value_exists_in_list_of_dicts(list_of_dicts, key, value):
+    for x in list_of_dicts:
+        if x.get(key) == value:
+            return True
+    return False

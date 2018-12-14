@@ -3,25 +3,25 @@
 
 <head>
   <meta charset="utf-8">
-<title>Projects &middot; Asana</title>
+<title>Tasks &middot; Asana</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <!-- Title Tagz -->
-<meta itemprop="name" content="Projects &middot; Asana">
-<meta property="og:title" content="Projects &middot; Asana">
-<meta name="twitter:title" content="Projects &middot; Asana">
+<meta itemprop="name" content="Tasks &middot; Asana">
+<meta property="og:title" content="Tasks &middot; Asana">
+<meta name="twitter:title" content="Tasks &middot; Asana">
 
 <!-- URL -->
-<link rel="canonical" href="https://asana.com/developers/api-reference/projects">
-<link itemprop="url" href="https://asana.com/developers/api-reference/projects">
-<meta property="og:url" content="https://asana.com/developers/api-reference/projects">
-<meta name="twitter:url" content="https://asana.com/developers/api-reference/projects">
+<link rel="canonical" href="https://asana.com/developers/api-reference/tasks">
+<link itemprop="url" href="https://asana.com/developers/api-reference/tasks">
+<meta property="og:url" content="https://asana.com/developers/api-reference/tasks">
+<meta name="twitter:url" content="https://asana.com/developers/api-reference/tasks">
 
 <!-- Description -->
-<meta name="description" content="Get documentation, references, and support for working with Asana Projects">
-<meta itemprop="description" content="Get documentation, references, and support for working with Asana Projects">
-<meta name="twitter:description" content="Get documentation, references, and support for working with Asana Projects">
-<meta property="og:description" content="Get documentation, references, and support for working with Asana Projects">
+<meta name="description" content="Get documentation, references, and support for working with Asana Tasks">
+<meta itemprop="description" content="Get documentation, references, and support for working with Asana Tasks">
+<meta name="twitter:description" content="Get documentation, references, and support for working with Asana Tasks">
+<meta property="og:description" content="Get documentation, references, and support for working with Asana Tasks">
 
 
 <!-- Author -->
@@ -125,15 +125,15 @@
         "@type": "ListItem",
         "position": 4,
         "item": {
-          "@id": "https://asana.com/developers/api-reference/projects",
-          "name": "Projects"
+          "@id": "https://asana.com/developers/api-reference/tasks",
+          "name": "Tasks"
         }
       },
     ]
   }
 </script>
 
-<link rel="alternate" hreflang="x-default" href="https://asana.com/developers/api-reference/projects">
+<link rel="alternate" hreflang="x-default" href="https://asana.com/developers/api-reference/tasks">
 
 
   <!-- Stylesheets -->
@@ -172,9 +172,9 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       <link rel="stylesheet" type="text/css" href="https://luna1.co/assets/dist/hashed/css/marketing-5e0f130674.css">
   
       <link rel="stylesheet" type="text/css" href="https://luna1.co/assets/dist/hashed/css/asana-dev-8022d3ccd6.css" />
-    <script src="https://luna1.co/assets/dist/hashed/js/page-specific/developers-9bc2a3e78b.js"></script>
+    <script src="https://luna1.co/assets/dist/hashed/js/site-specific/developers-9bc2a3e78b.js"></script>
   
-      <script src="https://luna1.co/assets/dist/hashed/js/page-specific/marketing-6f498b726e.js"></script>
+      <script src="https://luna1.co/assets/dist/hashed/js/site-specific/marketing-6f498b726e.js"></script>
   
   <!-- Ensure that animated objects are visible when JavaScript is disabled -->
   <noscript>
@@ -203,7 +203,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 		return this.charAt(0).toUpperCase() + this.slice(1);
 	}
 
-	var apiMethod = "projects";
+	var apiMethod = "tasks";
 
 	if (apiMethod == "typeaheads") {
 		var apiMethodString = "Workspaces";
@@ -360,40 +360,10 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
               </li>
             </a>
                                   <a href="/developers/api-reference/projects">
-              <li class="active">
+              <li>
                 Projects
               </li>
             </a>
-                          <ul>
-                                  <a href="#create">
-                    <li>Create a project</li>
-                  </a>
-                                  <a href="#get-single">
-                    <li>Get single project</li>
-                  </a>
-                                  <a href="#update">
-                    <li>Update a project</li>
-                  </a>
-                                  <a href="#delete">
-                    <li>Delete a project</li>
-                  </a>
-                                  <a href="#query">
-                    <li>Query for projects</li>
-                  </a>
-                                  <a href="#get-tasks">
-                    <li>Get project tasks</li>
-                  </a>
-                                  <a href="#sections">
-                    <li>Work with project sections</li>
-                  </a>
-                                  <a href="#members">
-                    <li>Work with project memberships</li>
-                  </a>
-                                  <a href="#custom-field-settings">
-                    <li>Modify custom field settings</li>
-                  </a>
-                
-              </ul>
                                   <a href="/developers/api-reference/sections">
               <li>
                 Sections
@@ -410,10 +380,58 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
               </li>
             </a>
                                   <a href="/developers/api-reference/tasks">
-              <li>
+              <li class="active">
                 Tasks
               </li>
             </a>
+                          <ul>
+                                  <a href="#create">
+                    <li>Create a task</li>
+                  </a>
+                                  <a href="#get">
+                    <li>Get a task</li>
+                  </a>
+                                  <a href="#update">
+                    <li>Update a task</li>
+                  </a>
+                                  <a href="#delete">
+                    <li>Delete a task</li>
+                  </a>
+                                  <a href="#query">
+                    <li>Query for tasks</li>
+                  </a>
+                                  <a href="#search">
+                    <li>Search for tasks in a workspace</li>
+                  </a>
+                                  <a href="#custom-field-values">
+                    <li>Custom field values</li>
+                  </a>
+                                  <a href="#custom_field_specific_data">
+                    <li>Custom field value-specific data</li>
+                  </a>
+                                  <a href="#setting_custom_field_values">
+                    <li>Setting custom field values</li>
+                  </a>
+                                  <a href="#subtasks">
+                    <li>Work with subtasks</li>
+                  </a>
+                                  <a href="#dependencies">
+                    <li>Work with dependencies</li>
+                  </a>
+                                  <a href="#stories">
+                    <li>Task activity and comments</li>
+                  </a>
+                                  <a href="#projects">
+                    <li>Task, project, and section associations</li>
+                  </a>
+                                  <a href="#tags">
+                    <li>Tags on tasks</li>
+                  </a>
+                                  <a href="#followers">
+                    <li>Followers on tasks</li>
+                  </a>
+                
+              </ul>
                                   <a href="/developers/api-reference/teams">
               <li>
                 Teams
@@ -465,7 +483,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
                 <!-- for docs and api pages -->
                                 <header class="page-header">
-                    <h2 class="entry-title" data-swiftype-name="title" data-swiftype-type="string">Projects</h2>
+                    <h2 class="entry-title" data-swiftype-name="title" data-swiftype-type="string">Tasks</h2>
                 </header>
 
                 <section class="page-content entry-content" data-swiftype-name="body" data-swiftype-type="text">
@@ -481,15 +499,15 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
                         <div class="tab">
                             <div id="tab-content" class="tab-content">
-                                <h3>Projects</h3>
+                                <h3>Tasks</h3>
 
-<p>A <em>project</em> represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</p>
+<p>The <em>task</em> is the basic object around which many operations in Asana are centered. In the Asana application, multiple tasks populate the middle pane according to some view parameters, and the set of selected tasks determines the more detailed information presented in the details pane.</p>
 
-<p>Projects in organizations are shared with a single team. You cannot currently change the team of a project via the API. Non-organization workspaces do not have teams and so you should not specify the team of project in a regular workspace.</p>
+<p>A <em>section</em>, at its core, is a task whose name ends with the colon character <code>:</code>. Sections are unique in that they will be included in the <code>memberships</code> field of task objects returned in the API when the task is within a section. As explained <a href="#projects">below</a> they can also be used to manipulate the ordering of a task within a project.</p>
 
-<p>Followers of a project are a subset of the members of that project. Followers of a project will receive all updates including tasks created, added and removed from that project. Members of the project have access to and will receive status updates of the project. Adding followers to a project will add them as members if they are not already, removing followers from a project will not affect membership.</p>
+<p><a href="#query">Queries</a> return a compact representation of each object which is typically the <code>id</code> and <code>name</code> fields. Interested in a specific set of fields or <em>all</em> of the fields? Use <a href="/developers/documentation/getting-started/input-output-options">field selectors</a> to manipulate what data is included in a response.</p>
 
-<h5 id="fields">Projects have the following fields:</h5>
+<h5 id="fields">Tasks have the following fields:</h5>
 
 <table>
 <thead>
@@ -501,104 +519,134 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 <tbody>
 <tr>
   <td>id<a class="jump-anchor" id="field-id"></a></td>
-  <td><code class="table-example">1234</code> <strong>Read-only.</strong> Globally unique ID of the project. <strong>Note: This field is under active migration to the <a href="#field-gid"><code>gid</code> field</a>&#8212;please see our <a href="/developers/documentation/getting-started/deprecations">blog post</a> for more information.</strong></td>
+  <td><code class="table-example">1234</code> <strong>Read-only.</strong> Globally unique ID of the task. <strong>Note: This field is under active migration to the <a href="#field-gid"><code>gid</code> field</a>&#8212;please see our <a href="/developers/documentation/getting-started/deprecations">blog post</a> for more information.</strong></td>
 </tr>
 <tr>
   <td>gid<a class="jump-anchor" id="field-gid"></a></td>
-  <td><code class="table-example">"1234"</code> <strong>Read-only.</strong> Globally unique ID of the project.</td>
+  <td><code class="table-example">"1234"</code> <strong>Read-only.</strong> Globally unique ID of the task.</td>
 </tr>
 <tr>
   <td>resource_type<a class="jump-anchor" id="field-resource_type"></a></td>
-  <td><code class="table-example">"project"</code> <strong>Read-only.</strong> The resource type of this resource. The value for this resource is always <code>project</code>. To distinguish between board and list projects see the <code>layout</code> property.</td>
+  <td><code class="table-example">"task"</code> <strong>Read-only.</strong> The resource type of this resource. The value for this resource is always <code>task</code>.</td>
 </tr>
 <tr>
-  <td>name<a class="jump-anchor" id="field-name"></a></td>
-  <td><code class="table-example">'Stuff to buy'</code> Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</td>
+  <td>resource_subtype<a class="jump-anchor" id="field-resource_subtype"></a></td>
+  <td><code class="table-example">"default_task"</code> <code class="table-example">"section"</code> <strong>Read-only.</strong> The type of task. Different subtypes of tasks retain many of the same fields and behavior, but may render differently in Asana or represent tasks with different semantic meaning.</td>
 </tr>
 <tr>
-  <td>owner<a class="jump-anchor" id="field-owner"></a></td>
-  <td><code class="table-example">{ id: 12345, gid: "12345", name: 'Tim Bizarro' }</code> <code class="table-example">null</code> The current owner of the project, may be null.</td>
+  <td>assignee<a class="jump-anchor" id="field-assignee"></a></td>
+  <td><code class="table-example">{ id: 12345, gid: "12345", name: 'Tim Bizarro' }</code> <code class="table-example">null</code> User to which this task is assigned, or <code>null</code> if the task is unassigned.</td>
 </tr>
 <tr>
-  <td>current_status<a class="jump-anchor" id="field-current_status"></a></td>
-  <td><code class="table-example">{ 'color': 'green', 'title': 'Status Update - Jun 15', ... } </code> <strong>Read-only.</strong> The most recently created status update for the project, or <code>null</code> if no update exists. See also the documentation for <a href="/developers/api-reference/project_statuses">project status updates</a>.</td>
-</tr>
-<tr>
-  <td>due_date<a class="jump-anchor" id="field-due_date"></a></td>
-  <td><code class="table-example">'2012-03-26'</code> The day on which this project is due. This takes a date with format YYYY-MM-DD.</td>
-</tr>
-<tr>
-  <td>start_on<a class="jump-anchor" id="field-start_on"></a></td>
-  <td><code class="table-example">'2012-03-26'</code> The day on which this project starts. This takes a date with format YYYY-MM-DD.</td>
+  <td>assignee_status<a class="jump-anchor" id="field-assignee_status"></a></td>
+  <td><code class="table-example">'upcoming'</code> Scheduling status of this task for the user it is assigned to. This field can only be set if the <code>assignee</code> is non-null.</td>
 </tr>
 <tr>
   <td>created_at<a class="jump-anchor" id="field-created_at"></a></td>
-  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this project was created.</td>
+  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this task was created.</td>
 </tr>
 <tr>
-  <td>modified_at<a class="jump-anchor" id="field-modified_at"></a></td>
-  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this project was last modified.<br><br><strong>Note:</strong> This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.</td>
+  <td>completed<a class="jump-anchor" id="field-completed"></a></td>
+  <td><code class="table-example">false</code> True if the task is currently marked complete, false if not.</td>
 </tr>
 <tr>
-  <td>archived<a class="jump-anchor" id="field-archived"></a></td>
-  <td><code class="table-example">false</code> True if the project is archived, false if not. Archived projects do not show in the UI by default and may be treated differently for queries.</td>
+  <td>completed_at<a class="jump-anchor" id="field-completed_at"></a></td>
+  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this task was completed, or null if the task is incomplete.</td>
 </tr>
 <tr>
-  <td>public<a class="jump-anchor" id="field-public"></a></td>
-  <td><code class="table-example">false</code> True if the project is public to the organization. If false, do not share this project with other users in this organization without explicitly checking to see if they have access.</td>
+  <td>custom_fields<a class="jump-anchor" id="field-custom_fields"></a></td>
+  <td><code class="table-example">[ { id: 1646, gid: "1646", name: 'Priority', type: 'enum', enum_value: { id: 126, gid: "126", name: 'P1' } }, ...]</code> Array of custom fields applied to the task. These custom fields represent the values recorded on this task for a particular custom field. For example, these fields will contain an <code>enum_value</code> property for custom fields of type <code>enum</code>, a <code>string_value</code> property for custom fields of type <code>string</code>, and so on. Please note that the id returned on each custom field value <em>is identical</em> to the id of the custom field, which allows referencing the custom field metadata through the <code>/custom_fields/custom_field-id</code> endpoint.</td>
 </tr>
 <tr>
-  <td>members<a class="jump-anchor" id="field-members"></a></td>
-  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> <strong>Read-only.</strong> Array of users who are members of this project.</td>
+  <td>dependencies<a class="jump-anchor" id="field-dependencies"></a></td>
+  <td><code class="table-example">[ { id: 1234, gid: "1234" }, ... ]</code> <strong>Read-only.</strong> Array of resources referencing tasks that this task depends on. The objects contain only the ID of the dependency.</td>
+</tr>
+<tr>
+  <td>dependents<a class="jump-anchor" id="field-dependents"></a></td>
+  <td><code class="table-example">[ { id: 1234, gid: "1234" }, ... ]</code> <strong>Read-only.</strong> Array of resources referencing tasks that depend on this task. The objects contain only the ID of the dependent.</td>
+</tr>
+<tr>
+  <td>due_on<a class="jump-anchor" id="field-due_on"></a></td>
+  <td><code class="table-example">'2012-03-26'</code> Date on which this task is due, or null if the task has no due date. This takes a date with YYYY-MM-DD format and should not be used together with <code>due_at</code>.</td>
+</tr>
+<tr>
+  <td>due_at<a class="jump-anchor" id="field-due_at"></a></td>
+  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> Date and time on which this task is due, or null if the task has no due time. This takes a UTC timestamp and should not be used together with <code>due_on</code>.</td>
+</tr>
+<tr>
+  <td>external<a class="jump-anchor" id="field-external"></a></td>
+  <td><code class="table-example">{ id: 'my_id', data: 'A blob of information.' }</code> <strong>Oauth Required.</strong> The external field allows you to store app-specific metadata on tasks, including an id that can be used to retrieve tasks and a data blob that can store app-specific character strings. Note that you will need to authenticate with Oauth to access or modify this data. Once an external id is set, you can use the notation <code>external:custom_id</code> to reference your object anywhere in the API where you may use the original object id. See the page on Custom External Data for more details.</td>
 </tr>
 <tr>
   <td>followers<a class="jump-anchor" id="field-followers"></a></td>
-  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> <strong>Read-only.</strong> Array of users following this project. Followers are a subset of members who receive all notifications for a project, the default notification setting when adding members to a project in-product.</td>
+  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> Array of users following this task.</td>
 </tr>
 <tr>
-  <td>custom_field_settings<a class="jump-anchor" id="field-custom_field_settings"></a></td>
-  <td><code class="table-example">[ { id: 258147, gid: "258147", custom_field: {id: 1646, gid: "1646", name: 'Priority', type: 'enum'}, project: {id: 1331, gid: "1646", name: 'Bugs'} }, ...]</code> <strong>Read-only.</strong> Array of Custom Field Settings (in compact form).</td>
+  <td>liked<a class="jump-anchor" id="field-liked"></a></td>
+  <td><code class="table-example">false</code> True if the task is liked by the authorized user, false if not.</td>
 </tr>
 <tr>
-  <td>color<a class="jump-anchor" id="field-color"></a></td>
-  <td><code class="table-example">'dark-purple'</code> Color of the project. Must be either <code>null</code> or one of: <code>dark-pink</code>, <code>dark-green</code>, <code>dark-blue</code>, <code>dark-red</code>, <code>dark-teal</code>, <code>dark-brown</code>, <code>dark-orange</code>, <code>dark-purple</code>, <code>dark-warm-gray</code>, <code>light-pink</code>, <code>light-green</code>, <code>light-blue</code>, <code>light-red</code>, <code>light-teal</code>, <code>light-yellow</code>, <code>light-orange</code>, <code>light-purple</code>, <code>light-warm-gray</code>.</td>
+  <td>likes<a class="jump-anchor" id="field-likes"></a></td>
+  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> <strong>Read-only.</strong> Array of users who have liked this task.</td>
+</tr>
+<tr>
+  <td>modified_at<a class="jump-anchor" id="field-modified_at"></a></td>
+  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this task was last modified.<br><br><strong>Note:</strong> This does not currently reflect any changes in associations such as projects or comments that may have been added or removed from the task.</td>
+</tr>
+<tr>
+  <td>name<a class="jump-anchor" id="field-name"></a></td>
+  <td><code class="table-example">'Buy catnip'</code> Name of the task. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</td>
 </tr>
 <tr>
   <td>notes<a class="jump-anchor" id="field-notes"></a></td>
-  <td><code class="table-example">'These are things we need to purchase.'</code> More detailed, free-form textual information associated with the project.</td>
+  <td><code class="table-example">'Mittens really likes the stuff from Humboldt.'</code> More detailed, free-form textual information associated with the task.</td>
 </tr>
 <tr>
   <td>html_notes<a class="jump-anchor" id="field-html_notes"></a></td>
-  <td><code class="table-example">'&lt;body&gt;Get whatever &lt;a href='https://app.asana.com/0/1123/list'&gt;Sashimi&lt;/a&gt; has.&lt;/body&gt;'</code> The notes of the project with formatting as HTML.<br><br><strong>Note:</strong> <strong>This field is under active migration—please see our <a href="/developers/news/new-rich-text">blog post</a> for more information.</strong></td>
+  <td><code class="table-example">'&lt;body&gt;Mittens &lt;em&gt;really&lt;/em&gt; likes the stuff from Humboldt.&lt;/body&gt;'</code> The notes of the text with formatting as HTML.<br><br><strong>Note:</strong> <strong>This field is under active migration—please see our <a href="/developers/news/new-rich-text">blog post</a> for more information.</strong></td>
+</tr>
+<tr>
+  <td>num_likes<a class="jump-anchor" id="field-num_likes"></a></td>
+  <td><code class="table-example">5</code> <strong>Read-only.</strong> The number of users who have liked this task.</td>
+</tr>
+<tr>
+  <td>projects<a class="jump-anchor" id="field-projects"></a></td>
+  <td><code class="table-example">[ { id: 1331, gid: "1331", name: 'Stuff to Buy' }, ... ]</code> <strong>Create-only.</strong> Array of projects this task is associated with. At task creation time, this array can be used to add the task to many projects at once. After task creation, these associations can be modified using the <code>addProject</code> and <code>removeProject</code> endpoints.</td>
+</tr>
+<tr>
+  <td>parent<a class="jump-anchor" id="field-parent"></a></td>
+  <td><code class="table-example">{ id: 1234, name: 'Bug task' }</code> <strong>Read-only.</strong> The parent of this task, or <code>null</code> if this is not a subtask. This property cannot be modified using a PUT request but you can change it with the <code>setParent</code> endpoint. You can create subtasks by using the subtasks endpoint.</td>
+</tr>
+<tr>
+  <td>start_on<a class="jump-anchor" id="field-start_on"></a></td>
+  <td><code class="table-example">'2012-03-26'</code> Date on which this task is due, or null if the task has no start date. This field takes a date with YYYY-MM-DD format.<br><br><strong>Note:</strong> <code>due_on</code> or <code>due_at</code> must be present in the request when setting or unsetting the <code>start_on</code> parameter.</td>
 </tr>
 <tr>
   <td>workspace<a class="jump-anchor" id="field-workspace"></a></td>
-  <td><code class="table-example">{ id: 14916, gid: "14916", name: 'My Workspace' }</code> <strong>Create-only.</strong> The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time.</td>
+  <td><code class="table-example">{ id: 14916, gid: "14916", name: 'My Workspace' }</code> <strong>Create-only.</strong> The workspace this task is associated with. Once created, task cannot be moved to a different workspace. This attribute can only be specified at creation time.</td>
 </tr>
 <tr>
-  <td>team<a class="jump-anchor" id="field-team"></a></td>
-  <td><code class="table-example">{ id: 692353, gid: "692353", name: 'organization.com Marketing' }</code> <strong>Create-only.</strong> The team that this project is shared with. This field only exists for projects in organizations.</td>
+  <td>memberships<a class="jump-anchor" id="field-memberships"></a></td>
+  <td><code class="table-example">[ { project: { id: 1331, gid: "1331", name: 'Bugs' }, section: { id: 1123, gid: "1123", name: 'P1:' } }, ... ]</code> <strong>Create-only.</strong> Array of projects this task is associated with and the section it is in. At task creation time, this array can be used to add the task to specific sections. After task creation, these associations can be modified using the <code>addProject</code> and <code>removeProject</code> endpoints. Note that over time, more types of memberships may be added to this property.</td>
 </tr>
 <tr>
-  <td>layout<a class="jump-anchor" id="field-layout"></a></td>
-  <td><code class="table-example">'board'</code> <code class="table-example">'list'</code> The layout (board or list view) of the project.</td>
+  <td>tags<a class="jump-anchor" id="field-tags"></a></td>
+  <td><code class="table-example">[ { id: 59746, gid:"59746", name: 'Grade A' }, ... ]</code> <strong>Create-only.</strong> Array of tags associated with this task. This property may be specified on creation using just an array of tag IDs. In order to change tags on an existing task use <code>addTag</code> and <code>removeTag</code>.</td>
 </tr>
 </tbody>
 </table>
 
 <p><a class="jump-anchor" id="create"></a>
-<strong><a href="#create">CREATE A PROJECT</a></strong></p>
+<strong><a href="#create">CREATE A TASK</a></strong></p>
 
-<pre><code class="nohighlight">POST    /projects
+<pre><code class="nohighlight">POST    /tasks
 </code></pre>
 
-<p>Creates a new project in a workspace or team.</p>
+<p>Creating a new task is as easy as POSTing to the <code>/tasks</code> endpoint with a data block containing the fields you&#8217;d like to set on the task. Any unspecified fields will take on default values.</p>
 
-<p>Every project is required to be created in a specific workspace or organization, and this cannot be changed once set. Note that you can use the <code>workspace</code> parameter regardless of whether or not it is an organization.</p>
+<p>Every task is required to be created in a specific workspace, and this workspace cannot be changed once set. The workspace need not be set explicitly if you specify <code>projects</code> or a <code>parent</code> task instead.</p>
 
-<p>If the workspace for your project <em>is</em> an organization, you must also supply a <code>team</code> to share the project with.</p>
-
-<p>Returns the full record of the newly created project.</p>
+<p><code>projects</code> can be a comma separated list of projects, or just a single project the task should belong to.</p>
 
 <table>
 <thead>
@@ -610,73 +658,263 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 <tbody>
 <tr>
   <td>workspace</td>
-  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization to create the project in.</td>
-</tr>
-<tr>
-  <td>team</td>
-  <td><code class="table-example">"14916"</code> If creating in an organization, the specific team to create the project in.</td>
+  <td><code class="table-example">"1331"</code> The workspace to create a task in.</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Create a new project.</strong></p>
+<p><strong>Create a task.</strong></p>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects \
---data-urlencode "notes=These are things we want to purchase." \
---data-urlencode "name=Things to Buy" \
+https://app.asana.com/api/1.0/tasks \
+--data-urlencode "assignee=1235" \
+--data-urlencode "notes=How are you today?" \
+--data-urlencode "followers[0]=5678" \
+--data-urlencode "name=Hello, world!" \
 --data-urlencode "workspace=14916"
 
 # Response
 HTTP/1.1 201
 {
   "data": {
-    "notes": "These are things we want to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
+    "created_at": "2012-02-22T02:06:58.158Z",
+    "name": "Hello, world!",
+    "parent": null,
+    "completed_at": null,
+    "notes": "How are you today?",
+    "modified_at": "2012-02-22T02:06:58.158Z",
+    "assignee_status": "inbox",
+    "assignee": {
+      "id": 1235,
+      "gid": "1235",
+      "resource_type": "user",
+      "name": "Tim Bizarro"
+    },
+    "completed": false,
+    "followers": [
+      {
+        "id": 5678,
+        "gid": "5678",
+        "resource_type": "user",
+        "name": "Greg Sanchez"
+      }
+    ],
+    "workspace": {
+      "id": 14916,
+      "gid": "14916",
+      "resource_type": "workspace",
+      "name": "My Favorite Workspace"
+    },
+    "due_on": null,
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "projects": [
+      {
+        "id": 14641,
+        "gid": "14641",
+        "resource_type": "project",
+        "name": "Cat Stuff"
+      }
+    ]
   }
 }
 </code></pre>
 
-<p><strong>Add a custom field setting to a project</strong></p>
+<p><strong>Create a subtask.</strong></p>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/addCustomFieldSetting \
---data-urlencode "custom_field=124578" \
---data-urlencode "is_important=true"
+https://app.asana.com/api/1.0/tasks/2272/subtasks \
+--data-urlencode "assignee=1235" \
+--data-urlencode "notes=He's going to be upset." \
+--data-urlencode "followers[0]=5678" \
+--data-urlencode "name=Tell Luke"
+
+# Response
+HTTP/1.1 201
+{
+  "data": {
+    "created_at": "2012-02-22T02:06:58.158Z",
+    "name": "Tell Luke",
+    "parent": {
+      "id": 2272,
+      "gid": "2272",
+      "resource_type": "task",
+      "name": "Tell kids I am their father."
+    },
+    "completed_at": null,
+    "notes": "He's going to be upset.",
+    "modified_at": "2012-02-22T02:06:58.158Z",
+    "assignee_status": "inbox",
+    "assignee": {
+      "id": 1235,
+      "gid": "1235",
+      "resource_type": "user",
+      "name": "Darth Vader"
+    },
+    "completed": false,
+    "followers": [
+      {
+        "id": 5678,
+        "gid": "5678",
+        "resource_type": "user",
+        "name": "Emperor Palpatine"
+      }
+    ],
+    "workspace": {
+      "id": 14916,
+      "gid": "14916",
+      "resource_type": "workspace",
+      "name": "Star Wars"
+    },
+    "due_on": null,
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "projects": []
+  }
+}
+</code></pre>
+
+<p><strong>Set the parent for an existing task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/2272/setParent \
+--data-urlencode "parent=1331"
 
 # Response
 HTTP/1.1 200
+{
+  "data": {
+    "...": "...",
+    "id": 2272,
+    "gid": "2272",
+    "resource_type": "task",
+    "parent": [
+      {
+        "id": 1331,
+        "gid": "1331",
+        "resource_type": "task",
+        "name": "Tell kids I am their father"
+      }
+    ],
+    "name": "Tell Luke"
+  }
+}
+</code></pre>
+
+<p><strong>Add project to a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/addProject \
+--data-urlencode "project=14641"
+
+# Response
+
 {
   "data": {}
 }
 </code></pre>
 
-<p><strong>Remove a custom field setting from a project</strong></p>
+<p><strong>Remove project from a task.</strong></p>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/removeCustomFieldSetting \
---data-urlencode "custom_field=124578"
+https://app.asana.com/api/1.0/tasks/1001/removeProject \
+--data-urlencode "project=14641"
 
 # Response
-HTTP/1.1 200
+
 {
   "data": {}
 }
 </code></pre>
 
-<pre><code class="nohighlight">POST    /workspaces/{workspace_gid}/projects
+<p><strong>Add tag to a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/addTag \
+--data-urlencode "tag=1771"
+
+# Response
+
+{
+  "data": {}
+}
 </code></pre>
 
-<p>If the workspace for your project <em>is</em> an organization, you must also supply a <code>team</code> to share the project with.</p>
+<p><strong>Remove tag from a task.</strong></p>
 
-<p>Returns the full record of the newly created project.</p>
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/removeTag \
+--data-urlencode "tag=1771"
+
+# Response
+
+{
+  "data": {}
+}
+</code></pre>
+
+<p><strong>Add followers to a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/addFollowers \
+--data-urlencode "followers[0]=1235"
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "followers": [
+      {
+        "id": 1235,
+        "gid": "1235",
+        "resource_type": "user",
+        "name": "Darth Vader"
+      }
+    ],
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "...": "..."
+  }
+}
+</code></pre>
+
+<p><strong>Remove followers from a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/removeFollowers \
+--data-urlencode "followers[0]=1235"
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "followers": [],
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "...": "..."
+  }
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /workspaces/{workspace_gid}/tasks
+</code></pre>
+
+<p>Creating a new task is as easy as POSTing to the <code>/tasks</code> endpoint with a data block containing the fields you&#8217;d like to set on the task. Any unspecified fields will take on default values.</p>
+
+<p>Every task is required to be created in a specific workspace, and this workspace cannot be changed once set. The workspace need not be set explicitly if you specify a <code>project</code> or a <code>parent</code> task instead.</p>
 
 <table>
 <thead>
@@ -688,17 +926,18 @@ HTTP/1.1 200
 <tbody>
 <tr>
   <td>workspace_gid</td>
-  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization to create the project in.</td>
+  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace to create a task in.</td>
 </tr>
 </tbody>
 </table>
 
-<pre><code class="nohighlight">POST    /teams/{team_gid}/projects
+<p><a class="jump-anchor" id="get"></a>
+<strong><a href="#get">GET A TASK</a></strong></p>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}
 </code></pre>
 
-<p>Creates a project shared with the given team.</p>
-
-<p>Returns the full record of the newly created project.</p>
+<p>Returns the complete task record for a single task.</p>
 
 <table>
 <thead>
@@ -709,93 +948,129 @@ HTTP/1.1 200
 </thead>
 <tbody>
 <tr>
-  <td>team_gid</td>
-  <td><code class="table-example">"14916"</code> <strong>Required:</strong> The team to create the project in.</td>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to get.</td>
 </tr>
 </tbody>
 </table>
 
-<p><a class="jump-anchor" id="get-single"></a>
-<strong><a href="#get-single">GET SINGLE PROJECT</a></strong></p>
-
-<pre><code class="nohighlight">GET    /projects/{project_gid}
-</code></pre>
-
-<p>Returns the complete project record for a single project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to get.</td>
-</tr>
-</tbody>
-</table>
-
-<p><strong>Show a specific project.</strong></p>
+<p><strong>Show a task.</strong></p>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331
+https://app.asana.com/api/1.0/tasks/1001
 
 # Response
 HTTP/1.1 200
 {
   "data": {
-    "notes": "These are things we want to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
+    "assignee": {
+      "id": 1234,
+      "gid": "1234",
+      "resource_type": "user",
+      "name": "Tim Bizarro"
+    },
+    "created_at": "2012-02-22T02:06:58.158Z",
+    "...": "..."
   }
 }
 </code></pre>
 
-<p><strong>Get visible tasks on a project.</strong></p>
+<p><strong>Show all of a task&#8217;s subtasks.</strong></p>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/tasks
+https://app.asana.com/api/1.0/tasks/7331/subtasks
 
 # Response
-HTTP/1.1 200
+
 {
   "data": [
     {
-      "id": 2001,
-      "gid": "2001",
+      "id": 5005,
+      "gid": "5005",
       "resource_type": "task",
-      "name": "Catnip"
+      "name": "Steal Underwear"
     },
     {
-      "id": 2002,
-      "gid": "2002",
+      "id": 6709,
+      "gid": "6709",
       "resource_type": "task",
-      "name": "Kitty litter"
+      "name": "???"
     },
-    "~..."
+    {
+      "id": 9812,
+      "gid": "9812",
+      "resource_type": "task",
+      "name": "Profit"
+    }
+  ]
+}
+</code></pre>
+
+<p><strong>Show list of projects on a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/projects
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 1331,
+      "gid": "1331",
+      "resource_type": "project",
+      "name": "Things To Buy"
+    },
+    {
+      "id": 14641,
+      "gid": "14641",
+      "resource_type": "project",
+      "name": "Cat Stuff"
+    }
+  ]
+}
+</code></pre>
+
+<p><strong>Show list of tags on a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/tags
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 1331,
+      "gid": "1331",
+      "resource_type": "tag",
+      "name": "orange"
+    },
+    {
+      "id": 1771,
+      "gid": "1771",
+      "resource_type": "tag",
+      "name": "fluffy"
+    }
   ]
 }
 </code></pre>
 
 <p><a class="jump-anchor" id="update"></a>
-<strong><a href="#update">UPDATE A PROJECT</a></strong></p>
+<strong><a href="#update">UPDATE A TASK</a></strong></p>
 
-<pre><code class="nohighlight">PUT    /projects/{project_gid}
+<pre><code class="nohighlight">PUT    /tasks/{task_gid}
 </code></pre>
 
-<p>A specific, existing project can be updated by making a PUT request on the URL for that project. Only the fields provided in the <code>data</code> block will be updated; any unspecified fields will remain unchanged.</p>
+<p>A specific, existing task can be updated by making a PUT request on the URL for that task. Only the fields provided in the <code>data</code> block will be updated; any unspecified fields will remain unchanged.</p>
 
 <p>When using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the task.</p>
 
-<p>Returns the complete updated project record.</p>
+<p>Returns the complete updated task record.</p>
 
 <table>
 <thead>
@@ -806,38 +1081,42 @@ HTTP/1.1 200
 </thead>
 <tbody>
 <tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to update.</td>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to update.</td>
 </tr>
 </tbody>
 </table>
 
 <pre><code># Request
 curl --request PUT -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331 \
---data-urlencode "notes=These are things we NEED to purchase."
+https://app.asana.com/api/1.0/tasks/1001 \
+--data-urlencode "assignee=me"
 
 # Response
 HTTP/1.1 200
 {
   "data": {
-    "notes": "These are things we NEED to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
+    "assignee": {
+      "id": 1234,
+      "gid": "1234",
+      "resource_type": "user",
+      "name": "Tim Bizarro"
+    },
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "...": "..."
   }
 }
 </code></pre>
 
 <p><a class="jump-anchor" id="delete"></a>
-<strong><a href="#delete">DELETE A PROJECT</a></strong></p>
+<strong><a href="#delete">DELETE A TASK</a></strong></p>
 
-<pre><code class="nohighlight">DELETE    /projects/{project_gid}
+<pre><code class="nohighlight">DELETE    /tasks/{task_gid}
 </code></pre>
 
-<p>A specific, existing project can be deleted by making a DELETE request on the URL for that project.</p>
+<p>A specific, existing task can be deleted by making a DELETE request on the URL for that task. Deleted tasks go into the &#8220;trash&#8221; of the user making the delete request. Tasks can be recovered from the trash within a period of 30 days; afterward they are completely removed from the system.</p>
 
 <p>Returns an empty data record.</p>
 
@@ -850,15 +1129,15 @@ HTTP/1.1 200
 </thead>
 <tbody>
 <tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to delete.</td>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to delete.</td>
 </tr>
 </tbody>
 </table>
 
 <pre><code># Request
 curl --request DELETE -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331
+https://app.asana.com/api/1.0/tasks/1001
 
 # Response
 HTTP/1.1 200
@@ -868,163 +1147,12 @@ HTTP/1.1 200
 </code></pre>
 
 <p><a class="jump-anchor" id="query"></a>
-<strong><a href="#query">QUERY FOR PROJECTS</a></strong></p>
-
-<pre><code class="nohighlight">GET    /projects
-</code></pre>
-
-<p>Returns the compact project records for some filtered set of projects. Use one or more of the parameters provided to filter the projects returned.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>workspace</td>
-  <td><code class="table-example">"1331"</code> The workspace or organization to filter projects on.</td>
-</tr>
-<tr>
-  <td>team</td>
-  <td><code class="table-example">"14916"</code> The team to filter projects on.</td>
-</tr>
-<tr>
-  <td>archived</td>
-  <td><code class="table-example">false</code> Only return projects whose <code>archived</code> field takes on the value of this parameter.</td>
-</tr>
-</tbody>
-</table>
-
-<p><strong>Show a specific project.</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331
-
-# Response
-HTTP/1.1 200
-{
-  "data": {
-    "notes": "These are things we want to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
-  }
-}
-</code></pre>
-
-<p><strong>Get visible tasks on a project.</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/tasks
-
-# Response
-HTTP/1.1 200
-{
-  "data": [
-    {
-      "id": 2001,
-      "gid": "2001",
-      "resource_type": "task",
-      "name": "Catnip"
-    },
-    {
-      "id": 2002,
-      "gid": "2002",
-      "resource_type": "task",
-      "name": "Kitty litter"
-    },
-    "~..."
-  ]
-}
-</code></pre>
-
-<pre><code class="nohighlight">GET    /workspaces/{workspace_gid}/projects
-</code></pre>
-
-<p>Returns the compact project records for all projects in the workspace.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>workspace_gid</td>
-  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization to find projects in.</td>
-</tr>
-<tr>
-  <td>archived</td>
-  <td><code class="table-example">false</code> Only return projects whose <code>archived</code> field takes on the value of this parameter.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/workspaces/14916/projects
-
-# Response
-HTTP/1.1 200
-{
-  "data": [
-    {
-      "id": 1331,
-      "gid": "1331",
-      "resource_type": "project",
-      "name": "Things to buy"
-    },
-    {
-      "id": 14641,
-      "gid": "14641",
-      "resource_type": "project",
-      "name": "Cat Stuff"
-    },
-    "~..."
-  ]
-}
-</code></pre>
-
-<pre><code class="nohighlight">GET    /teams/{team_gid}/projects
-</code></pre>
-
-<p>Returns the compact project records for all projects in the team.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>team_gid</td>
-  <td><code class="table-example">"14916"</code> <strong>Required:</strong> The team to find projects in.</td>
-</tr>
-<tr>
-  <td>archived</td>
-  <td><code class="table-example">false</code> Only return projects whose <code>archived</code> field takes on the value of this parameter.</td>
-</tr>
-</tbody>
-</table>
-
-<p><a class="jump-anchor" id="get-tasks"></a>
-<strong><a href="#get-tasks">GET PROJECT TASKS</a></strong></p>
+<strong><a href="#query">QUERY FOR TASKS</a></strong></p>
 
 <pre><code class="nohighlight">GET    /projects/{project_gid}/tasks
 </code></pre>
 
-<p>Returns the compact task records for all tasks within the given project, ordered by their priority within the project. Tasks can exist in more than one project at a time.</p>
+<p>Returns the compact task records for all tasks within the given project, ordered by their priority within the project.</p>
 
 <table>
 <thead>
@@ -1041,9 +1169,248 @@ HTTP/1.1 200
 </tbody>
 </table>
 
+<pre><code class="nohighlight">GET    /tags/{tag_gid}/tasks
+</code></pre>
+
+<p>Returns the compact task records for all tasks with the given tag.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>tag_gid</td>
+  <td><code class="table-example">"11235"</code> <strong>Required:</strong> The tag in which to search for tasks.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">GET    /sections/{section_gid}/tasks
+</code></pre>
+
+<p><b>Board view only:</b> Returns the compact section records for all tasks within the given section.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>section_gid</td>
+  <td><code class="table-example">"97531"</code> <strong>Required:</strong> The section in which to search for tasks.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">GET    /tasks
+</code></pre>
+
+<p>Returns the compact task records for some filtered set of tasks. Use one or more of the parameters provided to filter the tasks returned. You must specify a <code>project</code> or <code>tag</code> if you do not specify <code>assignee</code> and <code>workspace</code>.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>assignee</td>
+  <td><code class="table-example">14641</code> <code class="table-example">me</code> <code class="table-example">sashimi@asana.com</code> The assignee to filter tasks on.<br><br><strong>Note:</strong> If you specify <code>assignee</code>, you must also specify the <code>workspace</code> to filter on.</td>
+</tr>
+<tr>
+  <td>project</td>
+  <td><code class="table-example">"13579"</code> The project to filter tasks on.</td>
+</tr>
+<tr>
+  <td>section</td>
+  <td><code class="table-example">"97531"</code> The section to filter tasks on.<br><br><strong>Note:</strong> Currently, this is only supported in board views.</td>
+</tr>
+<tr>
+  <td>workspace</td>
+  <td><code class="table-example">"1331"</code> The workspace or organization to filter tasks on.<br><br><strong>Note:</strong> If you specify <code>workspace</code>, you must also specify the <code>assignee</code> to filter on.</td>
+</tr>
+<tr>
+  <td>completed_since</td>
+  <td><code class="table-example">'2012-02-22T02:06:58.158Z'</code> <code class="table-example">now</code> Only return tasks that are either incomplete or that have been completed since this time.</td>
+</tr>
+<tr>
+  <td>modified_since</td>
+  <td><code class="table-example">'2012-02-22T02:06:58.158Z'</code> <code class="table-example">now</code> Only return tasks that have been modified since the given time.<br><br><strong>Note:</strong> A task is considered &#8220;modified&#8221; if any of its properties change, or associations between it and other objects are modified (e.g. a task being added to a project). A task is not considered modified just because another object it is associated with (e.g. a subtask) is modified. Actions that count as modifying the task include assigning, renaming, completing, and adding stories.</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Show a task.</strong></p>
+
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/tasks
+https://app.asana.com/api/1.0/tasks/1001
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "assignee": {
+      "id": 1234,
+      "gid": "1234",
+      "resource_type": "user",
+      "name": "Tim Bizarro"
+    },
+    "created_at": "2012-02-22T02:06:58.158Z",
+    "...": "..."
+  }
+}
+</code></pre>
+
+<p><strong>Show tasks assigned to me in a workspace or organization.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks?workspace=14916&amp;assignee=me
+
+# Response
+HTTP/1.1 200
+{
+  "data": [
+    {
+      "id": 1248,
+      "gid": "1248",
+      "resource_type": "task",
+      "name": "Buy catnip"
+    },
+    {
+      "id": 24816,
+      "gid": "24816",
+      "resource_type": "task",
+      "name": "Reflect on role of kittens in society"
+    },
+  ]
+}
+</code></pre>
+
+<p><strong>Show all of a task&#8217;s subtasks.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/7331/subtasks
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 5005,
+      "gid": "5005",
+      "resource_type": "task",
+      "name": "Steal Underwear"
+    },
+    {
+      "id": 6709,
+      "gid": "6709",
+      "resource_type": "task",
+      "name": "???"
+    },
+    {
+      "id": 9812,
+      "gid": "9812",
+      "resource_type": "task",
+      "name": "Profit"
+    }
+  ]
+}
+</code></pre>
+
+<p><strong>Show list of projects on a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/projects
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 1331,
+      "gid": "1331",
+      "resource_type": "project",
+      "name": "Things To Buy"
+    },
+    {
+      "id": 14641,
+      "gid": "14641",
+      "resource_type": "project",
+      "name": "Cat Stuff"
+    }
+  ]
+}
+</code></pre>
+
+<p><strong>Show list of tags on a task.</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/tags
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 1331,
+      "gid": "1331",
+      "resource_type": "tag",
+      "name": "orange"
+    },
+    {
+      "id": 1771,
+      "gid": "1771",
+      "resource_type": "tag",
+      "name": "fluffy"
+    }
+  ]
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="search"></a>
+<strong><a href="#search">SEARCH FOR TASKS IN A WORKSPACE</a></strong></p>
+
+<pre><code class="nohighlight">GET    /workspaces/{workspace_gid}/tasks/search
+</code></pre>
+
+<p>The search endpoint allows you to build complex queries to find and fetch exactly the data you need from Asana. For a more comprehensive description of all the query parameters and limitations of this endpoint, see our <a href="/developers/documentation/getting-started/search-api">long-form documentation</a> for this feature.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>workspace_gid</td>
+  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization in which to search for tasks.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/workspaces/1337/tasks/search \
+--data-urlencode "completed=false" \
+--data-urlencode "text=dog" \
+--data-urlencode "assignee.any=me,gsanchez@example.com" \
+--data-urlencode "due_on.before=2018-07-15"
 
 # Response
 HTTP/1.1 200
@@ -1053,32 +1420,156 @@ HTTP/1.1 200
       "id": 2001,
       "gid": "2001",
       "resource_type": "task",
-      "name": "Catnip"
+      "name": "Dog treats"
     },
     {
       "id": 2002,
       "gid": "2002",
       "resource_type": "task",
-      "name": "Kitty litter"
+      "name": "Dog bed"
     },
     "~..."
   ]
 }
 </code></pre>
 
-<p><a class="jump-anchor" id="sections"></a>
-<strong><a href="#sections">WORK WITH PROJECT SECTIONS</a></strong>
-Sections are list items that end with a colon character <code>:</code> or columns in a board layout. The <code>memberships</code> property of a task contains the project/section pairs to which a task belongs when applicable.</p>
+<p><a class="jump-anchor" id="custom-field-values"></a>
+<strong><a href="#custom-field-values">CUSTOM FIELD VALUES</a></strong>
+Custom fields define user-specific information that can be used to configure tasks within a project to track information that is specific to one particular project. Be sure to reference the <a href="/developers/documentation/getting-started/custom-fields">Custom Fields</a> guide to get an understanding for the concepts of custom fields and how they relate to resources within Asana.</p>
 
-<p><strong>Deprecation warning</strong>: At this time, sections in a list-layout project are manipulated as if they were tasks, i.e. reordering a section involves moving the section (and all of its tasks if they are to remain in that section) to a new location in a project.  (see <a href="/developers/api-reference/tasks#projects">Task, Project, and Section Associations</a> for more information). This method of manipulating sections as if they are tasks will soon be deprecated in favor of the methods described in the <a href="/developers/api-reference/sections">Sections resource</a>.</p>
+<p>When a custom field is associated with a project, tasks in that project can carry additional <em>custom field values</em> which represent the value of the field on that particular task - for instance, the selected item from an <code>enum</code> type custom field. These custom fields will appear as an array in a <code>custom_fields</code> property of the task, along with some basic information which can be used to associate the custom field value with the custom field metadata.</p>
 
-<p><a class="jump-anchor" id="members"></a>
-<strong><a href="#members">WORK WITH PROJECT MEMBERSHIPS</a></strong></p>
+<p><strong>Custom field value for an <code>enum</code> field</strong></p>
 
-<pre><code class="nohighlight">POST    /projects/{project_gid}/addMembers
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "name": "Hello, world!",
+    "completed": false,
+    "...": "...",
+    "custom_fields": [
+      {
+        "id": 124578,
+        "gid": "124578",
+        "resource_type": "custom_field",
+        "resource_subtype": "enum",
+        "name": "Priority",
+        "type": "enum",
+        "enum_value": {
+          "id": 789,
+          "gid": "789",
+          "resource_type": "enum_option",
+          "name": "Low",
+          "enabled": true,
+          "color": "blue"
+        }
+      },
+      "~..."
+    ]
+  }
+}
 </code></pre>
 
-<p>Adds the specified list of users as members of the project. Returns the updated project record.</p>
+<p><strong>Custom field value for a <code>text</code> field</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "name": "Hello, world!",
+    "completed": false,
+    "...": "...",
+    "custom_fields": [
+      {
+        "id": 134679,
+        "gid": "134679",
+        "resource_type": "custom_field",
+        "resource_subtype": "text",
+        "name": "Owner",
+        "type": "text",
+        "text_value": "Greg Sanchez"
+      },
+      "~..."
+    ]
+  }
+}
+</code></pre>
+
+<p><strong>Custom field value for a <code>number</code> field</strong></p>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "name": "Hello, world!",
+    "completed": false,
+    "...": "...",
+    "custom_fields": [
+      {
+        "id": 134679,
+        "gid": "134679",
+        "resource_type": "custom_field",
+        "resource_subtype": "number",
+        "name": "Price",
+        "type": "number",
+        "number_value": "1.56"
+      },
+      "~..."
+    ]
+  }
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="custom_field_specific_data"></a>
+<strong><a href="#custom_field_specific_data">CUSTOM FIELD VALUE-SPECIFIC DATA</a></strong>
+Custom fields will return differing properties based on the custom field&#8217;s type.</p>
+
+<p>Custom fields of type <code>text</code> will return a <code>text_value</code> property containing the string of text for the field. Custom fields of type <code>number</code> will return a <code>number_value</code> property containing the number for the field. Custom fields of type <code>enum</code> will return an <code>enum_value</code> property containing an object that represents the selection of the enum value.</p>
+
+<p><code>enum_value</code> warrants special consideration: it represents a single entry from the <code>enum_options</code> array in the custom field metadata. It has these properties:</p>
+
+<p><strong>id</strong>: the id of the selected entry. <strong>name</strong>: the display name of the selected entry. <strong>enabled</strong>: whether the selection is modifiable. (See the documentation on <a href="/developers/documentation/getting-started/custom-fields#disabled-values">disabled values</a> for more information).</p>
+
+<p><a class="jump-anchor" id="setting_custom_field_values"></a>
+<strong><a href="#setting_custom_field_values">SETTING CUSTOM FIELD VALUES</a></strong>
+Custom fields are set with PUT requests similarly to setting other fields on tasks; the format of the request is to set the id to the new value. That is, <code>custom_fields:{custom_field_id:custom_field_value}</code></p>
+
+<p>Custom fields of type <code>text</code> are set by passing in <code>custom_field_id:string</code> Custom fields of type <code>number</code> are set by passing in <code>custom_field_id:number</code> Custom fields of type <code>enum</code> are set by passing in <code>custom_field_id:enum_value_id</code></p>
+
+<p><a class="jump-anchor" id="subtasks"></a>
+<strong><a href="#subtasks">WORK WITH SUBTASKS</a></strong>
+Creating a subtask is the same as a creating an normal task, but instead of specifying a workspace you must specify a parent task. Each task can only have a single parent and you can use the <code>setParent</code> endpoint to add or remove a parent from an existing task.</p>
+
+<p>Created subtasks are added to the beginning of their parent&#8217;s list of subtasks.</p>
+
+<p>You can find all of the subtasks of a task via the <code>/tasks/task-id/subtasks</code> endpoint.</p>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/subtasks
+</code></pre>
+
+<p>Returns a compact representation of all of the subtasks of a task.</p>
 
 <table>
 <thead>
@@ -1089,96 +1580,486 @@ Sections are list items that end with a colon character <code>:</code> or column
 </thead>
 <tbody>
 <tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to add members to.</td>
-</tr>
-<tr>
-  <td>members</td>
-  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of user ids.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code class="nohighlight">POST    /projects/{project_gid}/removeMembers
-</code></pre>
-
-<p>Removes the specified list of members from the project. Returns the updated project record.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to remove members from.</td>
-</tr>
-<tr>
-  <td>members</td>
-  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of user ids.</td>
-</tr>
-</tbody>
-</table>
-
-<p><a class="jump-anchor" id="custom-field-settings"></a>
-<strong><a href="#custom-field-settings">MODIFY CUSTOM FIELD SETTINGS</a></strong></p>
-
-<pre><code class="nohighlight">POST    /projects/{project_gid}/addCustomFieldSetting
-</code></pre>
-
-<p>Create a new custom field setting on the project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to associate the custom field with</td>
-</tr>
-<tr>
-  <td>custom_field</td>
-  <td><code class="table-example">"124578"</code> <strong>Required:</strong> The id of the custom field to associate with this project.</td>
-</tr>
-<tr>
-  <td>is_important</td>
-  <td><code class="table-example">false</code> Whether this field should be considered important to this project.</td>
-</tr>
-<tr>
-  <td>insert_before</td>
-  <td><code class="table-example">"258147"</code> An id of a Custom Field Settings on this project, before which the new Custom Field Settings will be added. <code>insert_before</code> and <code>insert_after</code> parameters cannot both be specified.</td>
-</tr>
-<tr>
-  <td>insert_after</td>
-  <td><code class="table-example">"258147"</code> An id of a Custom Field Settings on this project, after which the new Custom Field Settings will be added. <code>insert_before</code> and <code>insert_after</code> parameters cannot both be specified.</td>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to get the subtasks of.</td>
 </tr>
 </tbody>
 </table>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/addCustomFieldSetting \
---data-urlencode "custom_field=124578" \
---data-urlencode "is_important=true"
+https://app.asana.com/api/1.0/tasks/7331/subtasks
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 5005,
+      "gid": "5005",
+      "resource_type": "task",
+      "name": "Steal Underwear"
+    },
+    {
+      "id": 6709,
+      "gid": "6709",
+      "resource_type": "task",
+      "name": "???"
+    },
+    {
+      "id": 9812,
+      "gid": "9812",
+      "resource_type": "task",
+      "name": "Profit"
+    }
+  ]
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/subtasks
+</code></pre>
+
+<p>Creates a new subtask and adds it to the parent task. Returns the full record for the newly created subtask.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to add a subtask to.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/2272/subtasks \
+--data-urlencode "assignee=1235" \
+--data-urlencode "notes=He's going to be upset." \
+--data-urlencode "followers[0]=5678" \
+--data-urlencode "name=Tell Luke"
+
+# Response
+HTTP/1.1 201
+{
+  "data": {
+    "created_at": "2012-02-22T02:06:58.158Z",
+    "name": "Tell Luke",
+    "parent": {
+      "id": 2272,
+      "gid": "2272",
+      "resource_type": "task",
+      "name": "Tell kids I am their father."
+    },
+    "completed_at": null,
+    "notes": "He's going to be upset.",
+    "modified_at": "2012-02-22T02:06:58.158Z",
+    "assignee_status": "inbox",
+    "assignee": {
+      "id": 1235,
+      "gid": "1235",
+      "resource_type": "user",
+      "name": "Darth Vader"
+    },
+    "completed": false,
+    "followers": [
+      {
+        "id": 5678,
+        "gid": "5678",
+        "resource_type": "user",
+        "name": "Emperor Palpatine"
+      }
+    ],
+    "workspace": {
+      "id": 14916,
+      "gid": "14916",
+      "resource_type": "workspace",
+      "name": "Star Wars"
+    },
+    "due_on": null,
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "projects": []
+  }
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/setParent
+</code></pre>
+
+<p>Changes the parent of a task. Each task may only be a subtask of a single parent, or no parent task at all. Returns an empty data block. When using <code>insert_before</code> and <code>insert_after</code>, at most one of those two options can be specified, and they must already be subtasks of the parent.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to change the parent of.</td>
+</tr>
+<tr>
+  <td>parent</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The new parent of the task, or <code>null</code> for no parent.</td>
+</tr>
+<tr>
+  <td>insert_after</td>
+  <td><code class="table-example">124816</code> <code class="table-example">null</code> A subtask of the parent to insert the task after, or <code>null</code> to insert at the beginning of the list.</td>
+</tr>
+<tr>
+  <td>insert_before</td>
+  <td><code class="table-example">124816</code> <code class="table-example">null</code> A subtask of the parent to insert the task before, or <code>null</code> to insert at the end of the list.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/2272/setParent \
+--data-urlencode "parent=1331"
 
 # Response
 HTTP/1.1 200
+{
+  "data": {
+    "...": "...",
+    "id": 2272,
+    "gid": "2272",
+    "resource_type": "task",
+    "parent": [
+      {
+        "id": 1331,
+        "gid": "1331",
+        "resource_type": "task",
+        "name": "Tell kids I am their father"
+      }
+    ],
+    "name": "Tell Luke"
+  }
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="dependencies"></a>
+<strong><a href="#dependencies">WORK WITH DEPENDENCIES</a></strong>
+You can mark that a task depends on another task by using the <code>/tasks/task-id/addDependencies</code> and <code>/tasks/task-id/addDependents</code> endpoints. These associations can be removed with the <code>/tasks/task-id/removeDependencies</code> and <code>/tasks/task-id/removeDependents</code> endpoints.</p>
+
+<p>A task cannot depend on itself, and a task cannot depend on another task that already depends on it, e.g. task 1 cannot be made to depend on task 2 if task 2 already depends on task 1.</p>
+
+<p>You can find all of the dependencies of a task via the <code>/tasks/task-id/dependencies</code> endpoint, and all of its dependents via the <code>/tasks/task-id/dependents</code> endpoint.</p>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/dependencies
+</code></pre>
+
+<p>Returns the compact representations of all of the dependencies of a task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to get dependencies on.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/dependents
+</code></pre>
+
+<p>Returns the compact representations of all of the dependents of a task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to get dependents on.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/addDependencies
+</code></pre>
+
+<p>Marks a set of tasks as dependencies of this task, if they are not already dependencies. <em>A task can have at most 15 dependencies.</em></p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to add dependencies to.</td>
+</tr>
+<tr>
+  <td>dependencies</td>
+  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of task IDs that this task should depend on.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/addDependents
+</code></pre>
+
+<p>Marks a set of tasks as dependents of this task, if they are not already dependents. <em>A task can have at most 30 dependents.</em></p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to add dependents to.</td>
+</tr>
+<tr>
+  <td>dependents</td>
+  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of task IDs that should depend on this task.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/removeDependencies
+</code></pre>
+
+<p>Unlinks a set of dependencies from this task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to remove dependencies from.</td>
+</tr>
+<tr>
+  <td>dependencies</td>
+  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of task IDs to remove as dependencies.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/removeDependents
+</code></pre>
+
+<p>Unlinks a set of dependents from this task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to remove dependents from.</td>
+</tr>
+<tr>
+  <td>dependents</td>
+  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of task IDs to remove as dependents.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a class="jump-anchor" id="stories"></a>
+<strong><a href="#stories">TASK ACTIVITY AND COMMENTS</a></strong>
+Tasks, like some other objects in the system, have a series of <a href="/developers/api-reference/stories">stories</a> associated with them. A story can be an indicator of some action taken on a task (such as completing it), or it could be a comment left by a user.</p>
+
+<p>See the sections on <a href="/developers/api-reference/stories#get-all">querying for all stories</a> and <a href="/developers/api-reference/stories#post-comment">commenting on an object</a> for more information.</p>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/stories
+</code></pre>
+
+<p>Returns a compact representation of all of the stories on the task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task containing the stories to get.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/stories
+</code></pre>
+
+<p>Adds a comment to a task. The comment will be authored by the currently authenticated user, and timestamped when the server receives the request.</p>
+
+<p>Returns the full record for the new story added to the task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">124816</code> <strong>Required:</strong> Globally unique identifier for the task.</td>
+</tr>
+<tr>
+  <td>text</td>
+  <td><code class="table-example">'This is a comment.'</code> <strong>Required:</strong> The plain text of the comment to add.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a class="jump-anchor" id="projects"></a>
+<strong><a href="#projects">TASK, PROJECT, AND SECTION ASSOCIATIONS</a></strong>
+Each task can be associated with zero or more <a href="/developers/api-reference/projects">projects</a>.</p>
+
+<p>The <code>projects</code> endpoint on a task will return a compact representation of each of the projects on the task specified.</p>
+
+<p>The <code>addProject</code> or <code>removeProject</code> endpoints can be used to add and remove projects that a task is a member of by providing the required <code>project</code> parameter.</p>
+
+<p>Note that a task may belong to many projects and a single section within each project.</p>
+
+<p>Requests to add/remove projects, if successful, will return success and an empty data block.</p>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/projects
+</code></pre>
+
+<p>Returns a compact representation of all of the projects the task is in.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to get projects on.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/projects
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 1331,
+      "gid": "1331",
+      "resource_type": "project",
+      "name": "Things To Buy"
+    },
+    {
+      "id": 14641,
+      "gid": "14641",
+      "resource_type": "project",
+      "name": "Cat Stuff"
+    }
+  ]
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/addProject
+</code></pre>
+
+<p>Adds the task to the specified project, in the optional location specified. If no location arguments are given, the task will be added to the end of the project.</p>
+
+<p><code>addProject</code> can also be used to reorder a task within a project or section that already contains it.</p>
+
+<p>At most one of <code>insert_before</code>, <code>insert_after</code>, or <code>section</code> should be specified. Inserting into a section in an non-order-dependent way can be done by specifying <code>section</code>, otherwise, to insert within a section in a particular place, specify <code>insert_before</code> or <code>insert_after</code> and a task within the section to anchor the position of this task.</p>
+
+<p>Returns an empty data block.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to add to a project.</td>
+</tr>
+<tr>
+  <td>project</td>
+  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to add the task to.</td>
+</tr>
+<tr>
+  <td>insert_after</td>
+  <td><code class="table-example">124816</code> <code class="table-example">null</code> A task in the project to insert the task after, or <code>null</code> to insert at the beginning of the list.</td>
+</tr>
+<tr>
+  <td>insert_before</td>
+  <td><code class="table-example">124816</code> <code class="table-example">null</code> A task in the project to insert the task before, or <code>null</code> to insert at the end of the list.</td>
+</tr>
+<tr>
+  <td>section</td>
+  <td><code class="table-example">124816</code> A section in the project to insert the task into. The task will be inserted at the bottom of the section.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/addProject \
+--data-urlencode "project=14641"
+
+# Response
+
 {
   "data": {}
 }
 </code></pre>
 
-<pre><code class="nohighlight">POST    /projects/{project_gid}/removeCustomFieldSetting
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/removeProject
 </code></pre>
 
-<p>Remove a custom field setting on the project.</p>
+<p>Removes the task from the specified project. The task will still exist in the system, but it will not be in the project anymore.</p>
+
+<p>Returns an empty data block.</p>
 
 <table>
 <thead>
@@ -1189,25 +2070,250 @@ HTTP/1.1 200
 </thead>
 <tbody>
 <tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to associate the custom field with</td>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to remove from a project.</td>
 </tr>
 <tr>
-  <td>custom_field</td>
-  <td><code class="table-example">"124578"</code> The id of the custom field to remove from this project.</td>
+  <td>project</td>
+  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to remove the task from.</td>
 </tr>
 </tbody>
 </table>
 
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/removeCustomFieldSetting \
---data-urlencode "custom_field=124578"
+https://app.asana.com/api/1.0/tasks/1001/removeProject \
+--data-urlencode "project=14641"
+
+# Response
+
+{
+  "data": {}
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="tags"></a>
+<strong><a href="#tags">TAGS ON TASKS</a></strong>
+Each task can be associated with zero or more <a href="/developers/api-reference/tags">tags</a> in the system. The API allows you to query and change those associations.</p>
+
+<p>You can get the list of tags associated with a task by using the <code>tags</code> endpoint on a task, which will return a compact representation of each of the tags on the task specified.</p>
+
+<p>You can add or remove a tag using the <code>addTag</code> or <code>removeTag</code> endpoints, respectively, providing the parameters below.</p>
+
+<p>Requests to add/remove tags, if successful, will return success and an empty data block.</p>
+
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/tags
+</code></pre>
+
+<p>Returns a compact representation of all of the tags the task has.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to get tags on.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/tags
+
+# Response
+
+{
+  "data": [
+    {
+      "id": 1331,
+      "gid": "1331",
+      "resource_type": "tag",
+      "name": "orange"
+    },
+    {
+      "id": 1771,
+      "gid": "1771",
+      "resource_type": "tag",
+      "name": "fluffy"
+    }
+  ]
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/addTag
+</code></pre>
+
+<p>Adds a tag to a task. Returns an empty data block.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to add a tag to.</td>
+</tr>
+<tr>
+  <td>tag</td>
+  <td><code class="table-example">"11235"</code> <strong>Required:</strong> The tag to add to the task.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/addTag \
+--data-urlencode "tag=1771"
+
+# Response
+
+{
+  "data": {}
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/removeTag
+</code></pre>
+
+<p>Removes a tag from the task. Returns an empty data block.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to remove a tag from.</td>
+</tr>
+<tr>
+  <td>tag</td>
+  <td><code class="table-example">"11235"</code> <strong>Required:</strong> The tag to remove from the task.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/removeTag \
+--data-urlencode "tag=1771"
+
+# Response
+
+{
+  "data": {}
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="followers"></a>
+<strong><a href="#followers">FOLLOWERS ON TASKS</a></strong>
+Each task can be associated with zero or more followers in the system.</p>
+
+<p>You can add or remove followers using the <code>addFollowers</code> or <code>removeFollowers</code> endpoints, respectively, providing the parameters below.</p>
+
+<p>Requests to add/remove followers, if successful, will return the complete updated task record, described above.</p>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/addFollowers
+</code></pre>
+
+<p>Adds each of the specified followers to the task, if they are not already following. Returns the complete, updated record for the affected task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to add followers to.</td>
+</tr>
+<tr>
+  <td>followers</td>
+  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of followers to add to the task.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/addFollowers \
+--data-urlencode "followers[0]=1235"
 
 # Response
 HTTP/1.1 200
 {
-  "data": {}
+  "data": {
+    "followers": [
+      {
+        "id": 1235,
+        "gid": "1235",
+        "resource_type": "user",
+        "name": "Darth Vader"
+      }
+    ],
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "...": "..."
+  }
+}
+</code></pre>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/removeFollowers
+</code></pre>
+
+<p>Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> The task to remove followers from.</td>
+</tr>
+<tr>
+  <td>followers</td>
+  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of followers to remove from the task.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/removeFollowers \
+--data-urlencode "followers[0]=1235"
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "followers": [],
+    "id": 1001,
+    "gid": "1001",
+    "resource_type": "task",
+    "...": "..."
+  }
 }
 </code></pre>
                             </div>
@@ -1419,7 +2525,7 @@ HTTP/1.1 200
 </footer>
 
 
-<script src="https://luna1.co/assets/dist/hashed/js/page-specific/developers-footer-f52fb967d2.js"></script>
+<script src="https://luna1.co/assets/dist/hashed/js/site-specific/developers-footer-f52fb967d2.js"></script>
 <script>AsanaExplorer.Explorer.run(apiMethodString, optionalAPIMethodString);</script>
 
 

@@ -24,15 +24,14 @@ config = {
   'responseStatus': {'selector': 'div:first-of-type', 'regex': r'(\d+)', 'default': '200'},
   'responseDescription': {'selector': '.toggle p'},
   'responseSchema': {'selector': 'h6:contains(Example) ~ pre > code', 'isExample': True},
-
   'defaultParameterLocations': {
-    'put': 'field',
-    'post': 'field',
-    'patch': 'field',
+    'put': 'query',
+    'post': 'query',
+    'patch': 'query',
   },
 }
 
-def fixPathParameters(path):
+def fixPathString(path):
   return path
 
 def fixParameterType(type):
@@ -40,9 +39,16 @@ def fixParameterType(type):
     type = 'integer'
   return type
 
+def fixPathParameters(parameters):
+    return parameters
+
+def fixPathSchema(schema_data):
+  return schema_data
+
 config.update({'securityDefinitions': {
     'HTTP Basic': {
       'type': 'basic'
     }
   }
 })
+  

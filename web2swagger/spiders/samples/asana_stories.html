@@ -3,25 +3,25 @@
 
 <head>
   <meta charset="utf-8">
-<title>Projects &middot; Asana</title>
+<title>Stories &middot; Asana</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <!-- Title Tagz -->
-<meta itemprop="name" content="Projects &middot; Asana">
-<meta property="og:title" content="Projects &middot; Asana">
-<meta name="twitter:title" content="Projects &middot; Asana">
+<meta itemprop="name" content="Stories &middot; Asana">
+<meta property="og:title" content="Stories &middot; Asana">
+<meta name="twitter:title" content="Stories &middot; Asana">
 
 <!-- URL -->
-<link rel="canonical" href="https://asana.com/developers/api-reference/projects">
-<link itemprop="url" href="https://asana.com/developers/api-reference/projects">
-<meta property="og:url" content="https://asana.com/developers/api-reference/projects">
-<meta name="twitter:url" content="https://asana.com/developers/api-reference/projects">
+<link rel="canonical" href="https://asana.com/developers/api-reference/stories">
+<link itemprop="url" href="https://asana.com/developers/api-reference/stories">
+<meta property="og:url" content="https://asana.com/developers/api-reference/stories">
+<meta name="twitter:url" content="https://asana.com/developers/api-reference/stories">
 
 <!-- Description -->
-<meta name="description" content="Get documentation, references, and support for working with Asana Projects">
-<meta itemprop="description" content="Get documentation, references, and support for working with Asana Projects">
-<meta name="twitter:description" content="Get documentation, references, and support for working with Asana Projects">
-<meta property="og:description" content="Get documentation, references, and support for working with Asana Projects">
+<meta name="description" content="Get documentation, references, and support for working with Asana Stories">
+<meta itemprop="description" content="Get documentation, references, and support for working with Asana Stories">
+<meta name="twitter:description" content="Get documentation, references, and support for working with Asana Stories">
+<meta property="og:description" content="Get documentation, references, and support for working with Asana Stories">
 
 
 <!-- Author -->
@@ -125,15 +125,15 @@
         "@type": "ListItem",
         "position": 4,
         "item": {
-          "@id": "https://asana.com/developers/api-reference/projects",
-          "name": "Projects"
+          "@id": "https://asana.com/developers/api-reference/stories",
+          "name": "Stories"
         }
       },
     ]
   }
 </script>
 
-<link rel="alternate" hreflang="x-default" href="https://asana.com/developers/api-reference/projects">
+<link rel="alternate" hreflang="x-default" href="https://asana.com/developers/api-reference/stories">
 
 
   <!-- Stylesheets -->
@@ -172,9 +172,9 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
       <link rel="stylesheet" type="text/css" href="https://luna1.co/assets/dist/hashed/css/marketing-5e0f130674.css">
   
       <link rel="stylesheet" type="text/css" href="https://luna1.co/assets/dist/hashed/css/asana-dev-8022d3ccd6.css" />
-    <script src="https://luna1.co/assets/dist/hashed/js/page-specific/developers-9bc2a3e78b.js"></script>
+    <script src="https://luna1.co/assets/dist/hashed/js/site-specific/developers-9bc2a3e78b.js"></script>
   
-      <script src="https://luna1.co/assets/dist/hashed/js/page-specific/marketing-6f498b726e.js"></script>
+      <script src="https://luna1.co/assets/dist/hashed/js/site-specific/marketing-6f498b726e.js"></script>
   
   <!-- Ensure that animated objects are visible when JavaScript is disabled -->
   <noscript>
@@ -203,7 +203,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 		return this.charAt(0).toUpperCase() + this.slice(1);
 	}
 
-	var apiMethod = "projects";
+	var apiMethod = "stories";
 
 	if (apiMethod == "typeaheads") {
 		var apiMethodString = "Workspaces";
@@ -360,50 +360,38 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
               </li>
             </a>
                                   <a href="/developers/api-reference/projects">
-              <li class="active">
+              <li>
                 Projects
               </li>
             </a>
-                          <ul>
-                                  <a href="#create">
-                    <li>Create a project</li>
-                  </a>
-                                  <a href="#get-single">
-                    <li>Get single project</li>
-                  </a>
-                                  <a href="#update">
-                    <li>Update a project</li>
-                  </a>
-                                  <a href="#delete">
-                    <li>Delete a project</li>
-                  </a>
-                                  <a href="#query">
-                    <li>Query for projects</li>
-                  </a>
-                                  <a href="#get-tasks">
-                    <li>Get project tasks</li>
-                  </a>
-                                  <a href="#sections">
-                    <li>Work with project sections</li>
-                  </a>
-                                  <a href="#members">
-                    <li>Work with project memberships</li>
-                  </a>
-                                  <a href="#custom-field-settings">
-                    <li>Modify custom field settings</li>
-                  </a>
-                
-              </ul>
                                   <a href="/developers/api-reference/sections">
               <li>
                 Sections
               </li>
             </a>
                                   <a href="/developers/api-reference/stories">
-              <li>
+              <li class="active">
                 Stories
               </li>
             </a>
+                          <ul>
+                                  <a href="#get-all">
+                    <li>Get stories on object</li>
+                  </a>
+                                  <a href="#get-single">
+                    <li>Get a single story</li>
+                  </a>
+                                  <a href="#post-comment">
+                    <li>Commenting on an object</li>
+                  </a>
+                                  <a href="#update">
+                    <li>Update a story</li>
+                  </a>
+                                  <a href="#delete">
+                    <li>Delete a story</li>
+                  </a>
+                
+              </ul>
                                   <a href="/developers/api-reference/tags">
               <li>
                 Tags
@@ -465,7 +453,7 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
                 <!-- for docs and api pages -->
                                 <header class="page-header">
-                    <h2 class="entry-title" data-swiftype-name="title" data-swiftype-type="string">Projects</h2>
+                    <h2 class="entry-title" data-swiftype-name="title" data-swiftype-type="string">Stories</h2>
                 </header>
 
                 <section class="page-content entry-content" data-swiftype-name="body" data-swiftype-type="text">
@@ -481,15 +469,11 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 
                         <div class="tab">
                             <div id="tab-content" class="tab-content">
-                                <h3>Projects</h3>
+                                <h3>Stories</h3>
 
-<p>A <em>project</em> represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. It exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.</p>
+<p>A <em>story</em> represents an activity associated with an object in the Asana system. Stories are generated by the system whenever users take actions such as creating or assigning tasks, or moving tasks between projects. <em>Comments</em> are also a form of user-generated story.</p>
 
-<p>Projects in organizations are shared with a single team. You cannot currently change the team of a project via the API. Non-organization workspaces do not have teams and so you should not specify the team of project in a regular workspace.</p>
-
-<p>Followers of a project are a subset of the members of that project. Followers of a project will receive all updates including tasks created, added and removed from that project. Members of the project have access to and will receive status updates of the project. Adding followers to a project will add them as members if they are not already, removing followers from a project will not affect membership.</p>
-
-<h5 id="fields">Projects have the following fields:</h5>
+<h5 id="fields">Stories have the following fields:</h5>
 
 <table>
 <thead>
@@ -501,104 +485,78 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 <tbody>
 <tr>
   <td>id<a class="jump-anchor" id="field-id"></a></td>
-  <td><code class="table-example">1234</code> <strong>Read-only.</strong> Globally unique ID of the project. <strong>Note: This field is under active migration to the <a href="#field-gid"><code>gid</code> field</a>&#8212;please see our <a href="/developers/documentation/getting-started/deprecations">blog post</a> for more information.</strong></td>
+  <td><code class="table-example">1234</code> <strong>Read-only.</strong> Globally unique ID of the story. <strong>Note: This field is under active migration to the <a href="#field-gid"><code>gid</code> field</a>&#8212;please see our <a href="/developers/documentation/getting-started/deprecations">blog post</a> for more information.</strong></td>
 </tr>
 <tr>
   <td>gid<a class="jump-anchor" id="field-gid"></a></td>
-  <td><code class="table-example">"1234"</code> <strong>Read-only.</strong> Globally unique ID of the project.</td>
+  <td><code class="table-example">"1234"</code> <strong>Read-only.</strong> Globally unique ID of the story.</td>
 </tr>
 <tr>
   <td>resource_type<a class="jump-anchor" id="field-resource_type"></a></td>
-  <td><code class="table-example">"project"</code> <strong>Read-only.</strong> The resource type of this resource. The value for this resource is always <code>project</code>. To distinguish between board and list projects see the <code>layout</code> property.</td>
+  <td><code class="table-example">"story"</code> <strong>Read-only.</strong> The resource type of this resource. The value for this resource is always <code>story</code>.</td>
 </tr>
 <tr>
-  <td>name<a class="jump-anchor" id="field-name"></a></td>
-  <td><code class="table-example">'Stuff to buy'</code> Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.</td>
-</tr>
-<tr>
-  <td>owner<a class="jump-anchor" id="field-owner"></a></td>
-  <td><code class="table-example">{ id: 12345, gid: "12345", name: 'Tim Bizarro' }</code> <code class="table-example">null</code> The current owner of the project, may be null.</td>
-</tr>
-<tr>
-  <td>current_status<a class="jump-anchor" id="field-current_status"></a></td>
-  <td><code class="table-example">{ 'color': 'green', 'title': 'Status Update - Jun 15', ... } </code> <strong>Read-only.</strong> The most recently created status update for the project, or <code>null</code> if no update exists. See also the documentation for <a href="/developers/api-reference/project_statuses">project status updates</a>.</td>
-</tr>
-<tr>
-  <td>due_date<a class="jump-anchor" id="field-due_date"></a></td>
-  <td><code class="table-example">'2012-03-26'</code> The day on which this project is due. This takes a date with format YYYY-MM-DD.</td>
-</tr>
-<tr>
-  <td>start_on<a class="jump-anchor" id="field-start_on"></a></td>
-  <td><code class="table-example">'2012-03-26'</code> The day on which this project starts. This takes a date with format YYYY-MM-DD.</td>
+  <td>resource_subtype<a class="jump-anchor" id="field-resource_subtype"></a></td>
+  <td><code class="table-example">"comment_added"</code> <code class="table-example">"description_changed"</code> <code class="table-example">"liked"</code> <code class="table-example">...</code> <strong>Read-only.</strong> The type of story. This provides fine-grained information about what triggered the story&#8217;s creation. There are many story subtypes, so inspect the data returned from Asana&#8217;s API to find the value for your use case.</td>
 </tr>
 <tr>
   <td>created_at<a class="jump-anchor" id="field-created_at"></a></td>
-  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this project was created.</td>
+  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> The time at which this story was created.</td>
 </tr>
 <tr>
-  <td>modified_at<a class="jump-anchor" id="field-modified_at"></a></td>
-  <td><code class="table-example">'2012-02-22T02:06:58.147Z'</code> <strong>Read-only.</strong> The time at which this project was last modified.<br><br><strong>Note:</strong> This does not currently reflect any changes in associations such as tasks or comments that may have been added or removed from the project.</td>
+  <td>created_by<a class="jump-anchor" id="field-created_by"></a></td>
+  <td><code class="table-example">{ id: 12345, gid: "12345", name: 'Tim Bizarro' }</code> <code class="table-example">null</code> The user who created the story.</td>
 </tr>
 <tr>
-  <td>archived<a class="jump-anchor" id="field-archived"></a></td>
-  <td><code class="table-example">false</code> True if the project is archived, false if not. Archived projects do not show in the UI by default and may be treated differently for queries.</td>
+  <td>liked<a class="jump-anchor" id="field-liked"></a></td>
+  <td><code class="table-example">false</code> True if the story is liked by the authorized user, false if not.<br><br><strong>Note:</strong> This property only exists for stories that provide likes.</td>
 </tr>
 <tr>
-  <td>public<a class="jump-anchor" id="field-public"></a></td>
-  <td><code class="table-example">false</code> True if the project is public to the organization. If false, do not share this project with other users in this organization without explicitly checking to see if they have access.</td>
+  <td>likes<a class="jump-anchor" id="field-likes"></a></td>
+  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> <strong>Read-only.</strong> Array of users who have liked this story.<br><br><strong>Note:</strong> This property only exists for stories that provide likes.</td>
 </tr>
 <tr>
-  <td>members<a class="jump-anchor" id="field-members"></a></td>
-  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> <strong>Read-only.</strong> Array of users who are members of this project.</td>
+  <td>num_likes<a class="jump-anchor" id="field-num_likes"></a></td>
+  <td><code class="table-example">5</code> <strong>Read-only.</strong> The number of users who have liked this story.<br><br><strong>Note:</strong> This property only exists for stories that provide likes.</td>
 </tr>
 <tr>
-  <td>followers<a class="jump-anchor" id="field-followers"></a></td>
-  <td><code class="table-example">[ { id: 1123, gid: "1123", name: 'Mittens' }, ... ]</code> <strong>Read-only.</strong> Array of users following this project. Followers are a subset of members who receive all notifications for a project, the default notification setting when adding members to a project in-product.</td>
+  <td>text<a class="jump-anchor" id="field-text"></a></td>
+  <td><code class="table-example">'marked today'</code> <strong>Create-only.</strong> Human-readable text for the story or comment. This will not include the name of the creator.<br><br><strong>Note:</strong> This is not guaranteed to be stable for a given type of story. For example, text for a reassignment may <strong>not</strong> always say &ldquo;assigned to …&rdquo; as the text for a story can both be edited and change based on the language settings of the user making the request. Use the <code>resource_subtype</code> property to discover the action that created the story.</td>
 </tr>
 <tr>
-  <td>custom_field_settings<a class="jump-anchor" id="field-custom_field_settings"></a></td>
-  <td><code class="table-example">[ { id: 258147, gid: "258147", custom_field: {id: 1646, gid: "1646", name: 'Priority', type: 'enum'}, project: {id: 1331, gid: "1646", name: 'Bugs'} }, ...]</code> <strong>Read-only.</strong> Array of Custom Field Settings (in compact form).</td>
+  <td>html_text<a class="jump-anchor" id="field-html_text"></a></td>
+  <td><code class="table-example">'&lt;body&gt;Get whatever &lt;a href='https://app.asana.com/0/1123/list'&gt;Sashimi&lt;/a&gt; has.&lt;/body&gt;'</code> HTML formatted text for a comment.<br><br><strong>Note:</strong> <strong>This field is under active migration—please see our <a href="/developers/news/new-rich-text">blog post</a> for more information.</strong></td>
 </tr>
 <tr>
-  <td>color<a class="jump-anchor" id="field-color"></a></td>
-  <td><code class="table-example">'dark-purple'</code> Color of the project. Must be either <code>null</code> or one of: <code>dark-pink</code>, <code>dark-green</code>, <code>dark-blue</code>, <code>dark-red</code>, <code>dark-teal</code>, <code>dark-brown</code>, <code>dark-orange</code>, <code>dark-purple</code>, <code>dark-warm-gray</code>, <code>light-pink</code>, <code>light-green</code>, <code>light-blue</code>, <code>light-red</code>, <code>light-teal</code>, <code>light-yellow</code>, <code>light-orange</code>, <code>light-purple</code>, <code>light-warm-gray</code>.</td>
+  <td>target<a class="jump-anchor" id="field-target"></a></td>
+  <td><code class="table-example">{ id: 1234, name: 'Bug task' }</code> <strong>Read-only.</strong> The object this story is associated with. Currently may only be a task.</td>
 </tr>
 <tr>
-  <td>notes<a class="jump-anchor" id="field-notes"></a></td>
-  <td><code class="table-example">'These are things we need to purchase.'</code> More detailed, free-form textual information associated with the project.</td>
+  <td>is_pinned<a class="jump-anchor" id="field-is_pinned"></a></td>
+  <td><code class="table-example">false</code> Whether the story is pinned on the target.<br><br><strong>Note:</strong> This field is only present on comment and attachment stories.</td>
 </tr>
 <tr>
-  <td>html_notes<a class="jump-anchor" id="field-html_notes"></a></td>
-  <td><code class="table-example">'&lt;body&gt;Get whatever &lt;a href='https://app.asana.com/0/1123/list'&gt;Sashimi&lt;/a&gt; has.&lt;/body&gt;'</code> The notes of the project with formatting as HTML.<br><br><strong>Note:</strong> <strong>This field is under active migration—please see our <a href="/developers/news/new-rich-text">blog post</a> for more information.</strong></td>
+  <td>is_edited<a class="jump-anchor" id="field-is_edited"></a></td>
+  <td><code class="table-example">false</code> Whether the text of the story has been edited after creation.<br><br><strong>Note:</strong> This field is only present on comment stories.</td>
 </tr>
 <tr>
-  <td>workspace<a class="jump-anchor" id="field-workspace"></a></td>
-  <td><code class="table-example">{ id: 14916, gid: "14916", name: 'My Workspace' }</code> <strong>Create-only.</strong> The workspace or organization this project is associated with. Once created, projects cannot be moved to a different workspace. This attribute can only be specified at creation time.</td>
+  <td>source<a class="jump-anchor" id="field-source"></a></td>
+  <td><code class="table-example">'web'</code> <strong>Read-only.</strong> The component of the Asana product the user used to create the story.</td>
 </tr>
 <tr>
-  <td>team<a class="jump-anchor" id="field-team"></a></td>
-  <td><code class="table-example">{ id: 692353, gid: "692353", name: 'organization.com Marketing' }</code> <strong>Create-only.</strong> The team that this project is shared with. This field only exists for projects in organizations.</td>
-</tr>
-<tr>
-  <td>layout<a class="jump-anchor" id="field-layout"></a></td>
-  <td><code class="table-example">'board'</code> <code class="table-example">'list'</code> The layout (board or list view) of the project.</td>
+  <td>type<a class="jump-anchor" id="field-type"></a></td>
+  <td><code class="table-example">'comment'</code> <code class="table-example">'system'</code> <strong>Read-only.</strong> <strong>Deprecated: new integrations should prefer the <code>resource_subtype</code> field.</strong> The type of this story. For more fine-grained inspection of story types, see the <a href="#field-resource_subtype"><code>resource_subtype</code></a> property.</td>
 </tr>
 </tbody>
 </table>
 
-<p><a class="jump-anchor" id="create"></a>
-<strong><a href="#create">CREATE A PROJECT</a></strong></p>
+<p><a class="jump-anchor" id="get-all"></a>
+<strong><a href="#get-all">GET STORIES ON OBJECT</a></strong></p>
 
-<pre><code class="nohighlight">POST    /projects
+<pre><code class="nohighlight">GET    /tasks/{task_gid}/stories
 </code></pre>
 
-<p>Creates a new project in a workspace or team.</p>
-
-<p>Every project is required to be created in a specific workspace or organization, and this cannot be changed once set. Note that you can use the <code>workspace</code> parameter regardless of whether or not it is an organization.</p>
-
-<p>If the workspace for your project <em>is</em> an organization, you must also supply a <code>team</code> to share the project with.</p>
-
-<p>Returns the full record of the newly created project.</p>
+<p>Returns the compact records for all stories on the task.</p>
 
 <table>
 <thead>
@@ -609,160 +567,15 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 </thead>
 <tbody>
 <tr>
-  <td>workspace</td>
-  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization to create the project in.</td>
-</tr>
-<tr>
-  <td>team</td>
-  <td><code class="table-example">"14916"</code> If creating in an organization, the specific team to create the project in.</td>
+  <td>task_gid</td>
+  <td><code class="table-example">"124816"</code> <strong>Required:</strong> Globally unique identifier for the task.</td>
 </tr>
 </tbody>
 </table>
 
-<p><strong>Create a new project.</strong></p>
-
 <pre><code># Request
 curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects \
---data-urlencode "notes=These are things we want to purchase." \
---data-urlencode "name=Things to Buy" \
---data-urlencode "workspace=14916"
-
-# Response
-HTTP/1.1 201
-{
-  "data": {
-    "notes": "These are things we want to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
-  }
-}
-</code></pre>
-
-<p><strong>Add a custom field setting to a project</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/addCustomFieldSetting \
---data-urlencode "custom_field=124578" \
---data-urlencode "is_important=true"
-
-# Response
-HTTP/1.1 200
-{
-  "data": {}
-}
-</code></pre>
-
-<p><strong>Remove a custom field setting from a project</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/removeCustomFieldSetting \
---data-urlencode "custom_field=124578"
-
-# Response
-HTTP/1.1 200
-{
-  "data": {}
-}
-</code></pre>
-
-<pre><code class="nohighlight">POST    /workspaces/{workspace_gid}/projects
-</code></pre>
-
-<p>If the workspace for your project <em>is</em> an organization, you must also supply a <code>team</code> to share the project with.</p>
-
-<p>Returns the full record of the newly created project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>workspace_gid</td>
-  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization to create the project in.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code class="nohighlight">POST    /teams/{team_gid}/projects
-</code></pre>
-
-<p>Creates a project shared with the given team.</p>
-
-<p>Returns the full record of the newly created project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>team_gid</td>
-  <td><code class="table-example">"14916"</code> <strong>Required:</strong> The team to create the project in.</td>
-</tr>
-</tbody>
-</table>
-
-<p><a class="jump-anchor" id="get-single"></a>
-<strong><a href="#get-single">GET SINGLE PROJECT</a></strong></p>
-
-<pre><code class="nohighlight">GET    /projects/{project_gid}
-</code></pre>
-
-<p>Returns the complete project record for a single project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to get.</td>
-</tr>
-</tbody>
-</table>
-
-<p><strong>Show a specific project.</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331
-
-# Response
-HTTP/1.1 200
-{
-  "data": {
-    "notes": "These are things we want to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
-  }
-}
-</code></pre>
-
-<p><strong>Get visible tasks on a project.</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/tasks
+https://app.asana.com/api/1.0/tasks/1001/stories
 
 # Response
 HTTP/1.1 200
@@ -771,31 +584,44 @@ HTTP/1.1 200
     {
       "id": 2001,
       "gid": "2001",
-      "resource_type": "task",
-      "name": "Catnip"
+      "resource_type": "story",
+      "resource_subtype": "added_to_project",
+      "text": "added to Things To Buy",
+      "created_at": "2011-12-21T23:23:01.259Z",
+      "type": "system",
+      "created_by": {
+        "id": 5678,
+        "gid": "5678",
+        "resource_type": "user",
+        "name": "Greg Sanchez"
+      }
     },
     {
       "id": 2002,
       "gid": "2002",
-      "resource_type": "task",
-      "name": "Kitty litter"
-    },
-    "~..."
+      "resource_type": "story",
+      "resource_subtype": "comment_added",
+      "text": "Again? Wow, we really go through this stuff fast.",
+      "created_at": "2012-01-02T21:32:40.112Z",
+      "type": "comment",
+      "created_by": {
+        "id": 1234,
+        "gid": "1234",
+        "resource_type": "user",
+        "name": "Tim Bizarro"
+      }
+    }
   ]
 }
 </code></pre>
 
-<p><a class="jump-anchor" id="update"></a>
-<strong><a href="#update">UPDATE A PROJECT</a></strong></p>
+<p><a class="jump-anchor" id="get-single"></a>
+<strong><a href="#get-single">GET A SINGLE STORY</a></strong></p>
 
-<pre><code class="nohighlight">PUT    /projects/{project_gid}
+<pre><code class="nohighlight">GET    /stories/{story_gid}
 </code></pre>
 
-<p>A specific, existing project can be updated by making a PUT request on the URL for that project. Only the fields provided in the <code>data</code> block will be updated; any unspecified fields will remain unchanged.</p>
-
-<p>When using this method, it is best to specify only those fields you wish to change, or else you may overwrite changes made by another user since you last retrieved the task.</p>
-
-<p>Returns the complete updated project record.</p>
+<p>Returns the full record for a single story.</p>
 
 <table>
 <thead>
@@ -806,40 +632,186 @@ HTTP/1.1 200
 </thead>
 <tbody>
 <tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to update.</td>
+  <td>story_gid</td>
+  <td><code class="table-example">"182764"</code> <strong>Required:</strong> Globally unique identifier for the story.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/stories/2001
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "id": 2001,
+    "gid": "2001"
+    "resource_type": "story",
+    "resource_subtype": "comment_added",
+    "target": {
+      "id": 1234,
+      "gid": "1234",
+      "resource_type": "task",
+      "name": "Buy catnip"
+    },
+    "text": "Yes, please!",
+    "created_at": "2012-02-22T02:06:58.147Z",
+    "created_by": {
+      "id": 1123,
+      "gid": "1123",
+      "resource_type": "user",
+      "name": "Mittens"
+    },
+    "source": "web",
+    "type": "comment",
+    "is_edited": false,
+    "is_pinned": false
+  }
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="post-comment"></a>
+<strong><a href="#post-comment">COMMENTING ON AN OBJECT</a></strong></p>
+
+<pre><code class="nohighlight">POST    /tasks/{task_gid}/stories
+</code></pre>
+
+<p>Adds a comment to a task. The comment will be authored by the currently authenticated user, and timestamped when the server receives the request.</p>
+
+<p>Returns the full record for the new story added to the task.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>task_gid</td>
+  <td><code class="table-example">124816</code> <strong>Required:</strong> Globally unique identifier for the task.</td>
+</tr>
+<tr>
+  <td>text</td>
+  <td><code class="table-example">'This is a comment.'</code> <strong>Required:</strong> The plain text of the comment to add.</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code># Request
+curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
+https://app.asana.com/api/1.0/tasks/1001/stories \
+--data-urlencode "text=This is a very nice comment."
+
+# Response
+HTTP/1.1 200
+{
+  "data": {
+    "id": 2001,
+    "gid": "2001"
+    "resource_type": "story",
+    "resource_subtype": "comment_added",
+    "target": {
+      "id": 1001,
+      "gid": "1001",
+      "resource_type": "task",
+      "name": "Buy catnip"
+    },
+    "text": "This is a very nice comment.",
+    "created_at": "2011-12-21T23:23:01.259Z",
+    "created_by": {
+      "id": 5678,
+      "gid": "5678",
+      "resource_type": "user",
+      "name": "Greg Sanchez"
+    },
+    "source": "api",
+    "type": "comment",
+    "is_edited": false,
+    "is_pinned": false
+  }
+}
+</code></pre>
+
+<p><a class="jump-anchor" id="update"></a>
+<strong><a href="#update">UPDATE A STORY</a></strong></p>
+
+<pre><code class="nohighlight">PUT    /stories/{story_gid}
+</code></pre>
+
+<p>Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of <code>text</code> and <code>html_text</code> can be specified.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>story_gid</td>
+  <td><code class="table-example">"182764"</code> <strong>Required:</strong> Globally unique identifier for the story.</td>
+</tr>
+<tr>
+  <td>text</td>
+  <td><code class="table-example">'This is a comment.'</code> The plain text with which to update the comment.</td>
+</tr>
+<tr>
+  <td>html_text</td>
+  <td><code class="table-example">'Get whatever &lt;a href='https://app.asana.com/0/1123/1234'&gt;Sashimi&lt;/a&gt; has.'</code> The rich text with which to update the comment.</td>
+</tr>
+<tr>
+  <td>is_pinned</td>
+  <td><code class="table-example">false</code> Whether the story should be pinned on the resource.</td>
 </tr>
 </tbody>
 </table>
 
 <pre><code># Request
 curl --request PUT -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331 \
---data-urlencode "notes=These are things we NEED to purchase."
+https://app.asana.com/api/1.0/stories/2001 \
+--data-urlencode "text=This is some updated text."
 
 # Response
 HTTP/1.1 200
 {
   "data": {
-    "notes": "These are things we NEED to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
+    "id": 2001,
+    "gid": "2001"
+    "resource_type": "story",
+    "target": {
+      "id": 1001,
+      "gid": "1001",
+      "resource_type": "task",
+      "name": "Buy catnip"
+    },
+    "text": "This is some updated text.",
+    "created_at": "2011-12-21T23:23:01.259Z",
+    "created_by": {
+      "id": 5678,
+      "gid": "5678",
+      "resource_type": "user",
+      "name": "Greg Sanchez"
+    },
+    "source": "api",
+    "type": "comment",
+    "is_edited": true,
+    "is_pinned": false,
   }
 }
 </code></pre>
 
 <p><a class="jump-anchor" id="delete"></a>
-<strong><a href="#delete">DELETE A PROJECT</a></strong></p>
+<strong><a href="#delete">DELETE A STORY</a></strong></p>
 
-<pre><code class="nohighlight">DELETE    /projects/{project_gid}
+<pre><code class="nohighlight">DELETE    /stories/{story_gid}
 </code></pre>
 
-<p>A specific, existing project can be deleted by making a DELETE request on the URL for that project.</p>
-
-<p>Returns an empty data record.</p>
+<p>Deletes a story. A user can only delete stories they have created. Returns an empty data record.</p>
 
 <table>
 <thead>
@@ -850,359 +822,15 @@ HTTP/1.1 200
 </thead>
 <tbody>
 <tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to delete.</td>
+  <td>story_gid</td>
+  <td><code class="table-example">"182764"</code> <strong>Required:</strong> Globally unique identifier for the story.</td>
 </tr>
 </tbody>
 </table>
 
 <pre><code># Request
 curl --request DELETE -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331
-
-# Response
-HTTP/1.1 200
-{
-  "data": {}
-}
-</code></pre>
-
-<p><a class="jump-anchor" id="query"></a>
-<strong><a href="#query">QUERY FOR PROJECTS</a></strong></p>
-
-<pre><code class="nohighlight">GET    /projects
-</code></pre>
-
-<p>Returns the compact project records for some filtered set of projects. Use one or more of the parameters provided to filter the projects returned.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>workspace</td>
-  <td><code class="table-example">"1331"</code> The workspace or organization to filter projects on.</td>
-</tr>
-<tr>
-  <td>team</td>
-  <td><code class="table-example">"14916"</code> The team to filter projects on.</td>
-</tr>
-<tr>
-  <td>archived</td>
-  <td><code class="table-example">false</code> Only return projects whose <code>archived</code> field takes on the value of this parameter.</td>
-</tr>
-</tbody>
-</table>
-
-<p><strong>Show a specific project.</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331
-
-# Response
-HTTP/1.1 200
-{
-  "data": {
-    "notes": "These are things we want to purchase.",
-    "null": "...",
-    "id": 1331,
-    "gid": "1331",
-    "resource_type": "project",
-    "name": "Things to Buy"
-  }
-}
-</code></pre>
-
-<p><strong>Get visible tasks on a project.</strong></p>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/tasks
-
-# Response
-HTTP/1.1 200
-{
-  "data": [
-    {
-      "id": 2001,
-      "gid": "2001",
-      "resource_type": "task",
-      "name": "Catnip"
-    },
-    {
-      "id": 2002,
-      "gid": "2002",
-      "resource_type": "task",
-      "name": "Kitty litter"
-    },
-    "~..."
-  ]
-}
-</code></pre>
-
-<pre><code class="nohighlight">GET    /workspaces/{workspace_gid}/projects
-</code></pre>
-
-<p>Returns the compact project records for all projects in the workspace.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>workspace_gid</td>
-  <td><code class="table-example">"1331"</code> <strong>Required:</strong> The workspace or organization to find projects in.</td>
-</tr>
-<tr>
-  <td>archived</td>
-  <td><code class="table-example">false</code> Only return projects whose <code>archived</code> field takes on the value of this parameter.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/workspaces/14916/projects
-
-# Response
-HTTP/1.1 200
-{
-  "data": [
-    {
-      "id": 1331,
-      "gid": "1331",
-      "resource_type": "project",
-      "name": "Things to buy"
-    },
-    {
-      "id": 14641,
-      "gid": "14641",
-      "resource_type": "project",
-      "name": "Cat Stuff"
-    },
-    "~..."
-  ]
-}
-</code></pre>
-
-<pre><code class="nohighlight">GET    /teams/{team_gid}/projects
-</code></pre>
-
-<p>Returns the compact project records for all projects in the team.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>team_gid</td>
-  <td><code class="table-example">"14916"</code> <strong>Required:</strong> The team to find projects in.</td>
-</tr>
-<tr>
-  <td>archived</td>
-  <td><code class="table-example">false</code> Only return projects whose <code>archived</code> field takes on the value of this parameter.</td>
-</tr>
-</tbody>
-</table>
-
-<p><a class="jump-anchor" id="get-tasks"></a>
-<strong><a href="#get-tasks">GET PROJECT TASKS</a></strong></p>
-
-<pre><code class="nohighlight">GET    /projects/{project_gid}/tasks
-</code></pre>
-
-<p>Returns the compact task records for all tasks within the given project, ordered by their priority within the project. Tasks can exist in more than one project at a time.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project in which to search for tasks.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/tasks
-
-# Response
-HTTP/1.1 200
-{
-  "data": [
-    {
-      "id": 2001,
-      "gid": "2001",
-      "resource_type": "task",
-      "name": "Catnip"
-    },
-    {
-      "id": 2002,
-      "gid": "2002",
-      "resource_type": "task",
-      "name": "Kitty litter"
-    },
-    "~..."
-  ]
-}
-</code></pre>
-
-<p><a class="jump-anchor" id="sections"></a>
-<strong><a href="#sections">WORK WITH PROJECT SECTIONS</a></strong>
-Sections are list items that end with a colon character <code>:</code> or columns in a board layout. The <code>memberships</code> property of a task contains the project/section pairs to which a task belongs when applicable.</p>
-
-<p><strong>Deprecation warning</strong>: At this time, sections in a list-layout project are manipulated as if they were tasks, i.e. reordering a section involves moving the section (and all of its tasks if they are to remain in that section) to a new location in a project.  (see <a href="/developers/api-reference/tasks#projects">Task, Project, and Section Associations</a> for more information). This method of manipulating sections as if they are tasks will soon be deprecated in favor of the methods described in the <a href="/developers/api-reference/sections">Sections resource</a>.</p>
-
-<p><a class="jump-anchor" id="members"></a>
-<strong><a href="#members">WORK WITH PROJECT MEMBERSHIPS</a></strong></p>
-
-<pre><code class="nohighlight">POST    /projects/{project_gid}/addMembers
-</code></pre>
-
-<p>Adds the specified list of users as members of the project. Returns the updated project record.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to add members to.</td>
-</tr>
-<tr>
-  <td>members</td>
-  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of user ids.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code class="nohighlight">POST    /projects/{project_gid}/removeMembers
-</code></pre>
-
-<p>Removes the specified list of members from the project. Returns the updated project record.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to remove members from.</td>
-</tr>
-<tr>
-  <td>members</td>
-  <td><code class="table-example">["133713", "184253"]</code> <strong>Required:</strong> An array of user ids.</td>
-</tr>
-</tbody>
-</table>
-
-<p><a class="jump-anchor" id="custom-field-settings"></a>
-<strong><a href="#custom-field-settings">MODIFY CUSTOM FIELD SETTINGS</a></strong></p>
-
-<pre><code class="nohighlight">POST    /projects/{project_gid}/addCustomFieldSetting
-</code></pre>
-
-<p>Create a new custom field setting on the project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to associate the custom field with</td>
-</tr>
-<tr>
-  <td>custom_field</td>
-  <td><code class="table-example">"124578"</code> <strong>Required:</strong> The id of the custom field to associate with this project.</td>
-</tr>
-<tr>
-  <td>is_important</td>
-  <td><code class="table-example">false</code> Whether this field should be considered important to this project.</td>
-</tr>
-<tr>
-  <td>insert_before</td>
-  <td><code class="table-example">"258147"</code> An id of a Custom Field Settings on this project, before which the new Custom Field Settings will be added. <code>insert_before</code> and <code>insert_after</code> parameters cannot both be specified.</td>
-</tr>
-<tr>
-  <td>insert_after</td>
-  <td><code class="table-example">"258147"</code> An id of a Custom Field Settings on this project, after which the new Custom Field Settings will be added. <code>insert_before</code> and <code>insert_after</code> parameters cannot both be specified.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/addCustomFieldSetting \
---data-urlencode "custom_field=124578" \
---data-urlencode "is_important=true"
-
-# Response
-HTTP/1.1 200
-{
-  "data": {}
-}
-</code></pre>
-
-<pre><code class="nohighlight">POST    /projects/{project_gid}/removeCustomFieldSetting
-</code></pre>
-
-<p>Remove a custom field setting on the project.</p>
-
-<table>
-<thead>
-<tr>
-  <th>Parameter</th>
-  <th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>project_gid</td>
-  <td><code class="table-example">"13579"</code> <strong>Required:</strong> The project to associate the custom field with</td>
-</tr>
-<tr>
-  <td>custom_field</td>
-  <td><code class="table-example">"124578"</code> The id of the custom field to remove from this project.</td>
-</tr>
-</tbody>
-</table>
-
-<pre><code># Request
-curl -H "Authorization: Bearer &lt;personal_access_token&gt;" \
-https://app.asana.com/api/1.0/projects/1331/removeCustomFieldSetting \
---data-urlencode "custom_field=124578"
+https://app.asana.com/api/1.0/stories/2001
 
 # Response
 HTTP/1.1 200
@@ -1419,7 +1047,7 @@ HTTP/1.1 200
 </footer>
 
 
-<script src="https://luna1.co/assets/dist/hashed/js/page-specific/developers-footer-f52fb967d2.js"></script>
+<script src="https://luna1.co/assets/dist/hashed/js/site-specific/developers-footer-f52fb967d2.js"></script>
 <script>AsanaExplorer.Explorer.run(apiMethodString, optionalAPIMethodString);</script>
 
 
